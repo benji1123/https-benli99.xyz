@@ -6,7 +6,7 @@ body {
 h1{
  padding-top: 10%;
  text-align: center;
- font-size: 70px;
+ font-size: 50px;
 }
 
 .gradient-text{
@@ -17,13 +17,17 @@ h1{
  -webkit-text-fill-color: transparent;
 }
 
+.gradient-text:hover{
+    filter: brightness(150%);
+}
+
 .iconrow {
  text-align: center;
  padding-top: 20px;
 }
 
 .icon {
- width: 80px;
+ width: 60px;
  padding-bottom: 20px;
  filter: saturate(0%) brightness(300%);
 }
