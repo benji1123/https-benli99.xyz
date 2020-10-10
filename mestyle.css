@@ -17,10 +17,6 @@ h1{
  -webkit-text-fill-color: transparent;
 }
 
-.gradient-text:hover{
-    filter: brightness(150%);
-}
-
 .iconrow {
  text-align: center;
  padding-top: 20px;
