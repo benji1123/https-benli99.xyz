@@ -16,8 +16,7 @@ h2 {
     font-size: 20px;
 }
 .gradient-text{
- background-color: #f3ec78;
- background-image: linear-gradient(45deg, #f3ec78, #af4261);
+ background-image: linear-gradient(45deg, #ADD2FF, white);
  background-size: 100%;
  -webkit-background-clip: text;
  -webkit-text-fill-color: transparent;
@@ -30,11 +29,10 @@ h2 {
 .icon {
  width: 50px;
  padding-bottom: 20px;
- filter: saturate(100%);
+ filter: saturate(0%) brightness(300%);
 }
 .icon:hover {
-    
-    filter: saturate(0%) brightness(300%);
+ filter: saturate(100%);
 }
 
 /* page is split into left & right halves */
@@ -58,9 +56,12 @@ h2 {
 }
 .right {
  right: 0;
- background-color: black;
+ background-color: #33CBF5;
  width: 20%;
 }
+.right:hover {
+ background-color: black;
+} 
 .centered {
  position: absolute;
  top: 50%;
