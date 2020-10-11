@@ -49,8 +49,12 @@ h2 {
 .left {
  left: 0;
  width: 80%;
- background: url(media/kyoto.gif) no-repeat;
+ background: url(media/pets.gif) no-repeat;
  background-size: cover;
+}
+.left:hover {
+ background: url(media/sleep.gif) no-repeat;
+ background-size: cover;  
 }
 .right {
  right: 0;
