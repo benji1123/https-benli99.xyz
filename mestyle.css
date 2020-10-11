@@ -29,10 +29,10 @@ h2 {
 .icon {
  width: 40px;
  padding-bottom: 20px;
- filter: saturate(100%);
+ filter: saturate(0%) brightness(300%);
 }
 .icon:hover {
- filter: saturate(0%) brightness(300%);
+ filter: saturate(100%);
 }
 
 /* page is split into left & right halves */
@@ -47,7 +47,7 @@ h2 {
 .left {
  left: 0;
  width: 80%;
- background: url(media/pets.gif) no-repeat;
+ background: url(media/bridge.gif) no-repeat;
  background-size: cover;
 }
 .left:hover {
