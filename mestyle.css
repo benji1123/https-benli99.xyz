@@ -27,12 +27,12 @@ h2 {
  padding-top: 20px;
 }
 .icon {
- width: 50px;
+ width: 40px;
  padding-bottom: 20px;
- filter: saturate(0%) brightness(300%);
+ filter: saturate(100%);
 }
 .icon:hover {
- filter: saturate(100%);
+ filter: saturate(0%) brightness(300%);
 }
 
 /* page is split into left & right halves */
@@ -59,9 +59,6 @@ h2 {
  background-color: #33CBF5;
  width: 20%;
 }
-.right:hover {
- background-color: black;
-} 
 .centered {
  position: absolute;
  top: 50%;
