@@ -1,72 +1,92 @@
 body {
- font-family: Times;
- color: white;
+  font-family: Times;
+  color: white;
 }
 
 a {
- text-decoration:none;
+  text-decoration: none;
 }
 
-h1{
- padding-top: 10%;
- text-align: center;
- font-size: 40px;
-}
-h2 {
-    font-size: 20px;
-}
-.gradient-text{
- background-image: linear-gradient(45deg, #ADD2FF, white);
- background-size: 100%;
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
+h1 {
+  text-align: center;
+  font-size: 5em;
+  padding-bottom: 5%;
 }
 
+/* ====== ICONS ====== */
 .iconrow {
- text-align: center;
- padding-top: 20px;
-}
-.icon {
- width: 40px;
- padding-bottom: 20px;
- filter: saturate(0%) brightness(300%);
-}
-.icon:hover {
- filter: saturate(100%);
+  text-align: center;
 }
 
-/* page is split into left & right halves */
-.left,.right {
- height: 100%;
- position: fixed;
- z-index: 1;
- top: 0;
- overflow-x: hidden;
+.iconrow .icon {
+  width: 15%;
+  padding-bottom: 9%;
+  -webkit-filter: saturate(30%) brightness(100%);
+          filter: saturate(30%) brightness(100%);
+}
+
+.iconrow .icon:hover {
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
+}
+
+@media screen and (max-device-width: 480px) {
+  .iconrow .icon {
+    padding-bottom: 13%;
+  }
+}
+
+/* ====== SEPARATE PAGE TO 2 HALVES ====== */
+.left,
+.right {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  background-size: cover;
+  padding-top: 5%;
 }
 
 .left {
- left: 0;
- width: 80%;
- background: url(media/bridge.gif) no-repeat;
- background-size: cover;
+  left: 0;
+  width: 65%;
+  background: url("media/lanterns.webp") no-repeat;
+  -webkit-filter: saturate(15%);
+          filter: saturate(15%);
+  background-position: center top;
 }
-.left:hover {
- background: url(media/city.gif) no-repeat;
- background-size: cover;  
-}
+
 .right {
- right: 0;
- background-color: #33CBF5;
- width: 20%;
+  right: 0;
+  background: url(media/lamp.gif) no-repeat;
+  background-size: cover;
+  width: 35%;
 }
-.centered {
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- text-align: center;
+
+/* limited space so don't render 'left' on mobile */
+@media screen and (max-device-width: 480px) {
+  .left {
+    width: 0%;
+    background: white;
+  }
+  .right {
+    width: 100%;
+  }
 }
-.centered img {
- width: 150px;
- border-radius: 50%;
+
+/* ====== OTHER ====== */
+.art-credit {
+  background-image: linear-gradient(45deg, #ADD2FF, white);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1em;
 }
+
+@media screen and (max-device-width: 480px) {
+  .art-credit {
+    font-size: 3em;
+  }
+}
+/*# sourceMappingURL=mestyle.css.map */
