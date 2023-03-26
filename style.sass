@@ -4,7 +4,7 @@
 $mobile: 480px
 // TODO: edit photo so i don't have to apply CSS filters
 $left-background: "media/cyber.jpeg"
-$right-background: "media/cyber.jpeg"
+$right-background: "media/cyber-blur2.png"
 
 body
     font-family: Times
@@ -21,15 +21,23 @@ h1
 /* ====== ICONS ====== */
 .iconrow 
     text-align: center
+    padding-bottom: 50px
     .icon 
-        height: 100px
-        padding-bottom: 50px
+        height: 80px
         filter: saturate(30%) brightness(100%)
     .icon:hover 
         filter: saturate(100%)
     @media screen and (max-device-width: $mobile)
-        .icon
+        .iconrow 
+            text-align: center
             padding-bottom: 13%
+        .icon
+            height: 100px
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
 
 /* ====== SEPARATE PAGE TO 2 HALVES ====== */
 .left,
@@ -46,14 +54,13 @@ h1
     background: url($left-background) no-repeat
     // filter: saturate(15%)
     background-position: center
-    -webkit-transform: scaleX(-1)
     filter: saturate(150%)
     background-size: cover
 .right 
     right: 0
     background: url($right-background) no-repeat
     background-size: cover
-    background-position: left
+    background-position: center
     width: 29%
 /* limited space so don't render 'left' on mobile */
 @media screen and (max-device-width: $mobile)
@@ -65,16 +72,13 @@ h1
 
 /* ====== OTHER ====== */
 .art-credit 
-    background-image: linear-gradient(45deg, #ADD2FF, white)
-    background-size: 100%
-    -webkit-background-clip: text
-    -webkit-text-fill-color: transparent
     font-size: 1em
+    color: white
     @media screen and (max-device-width: $mobile)
         font-size: 3em
 
 /* ====== GROOT ====== */
-$grootHeight: 600px
+$grootHeight: 500px
 $grootMaxHeight: -50px
 #groot
     bottom: -($grootHeight)
