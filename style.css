@@ -1,83 +1,151 @@
-body {
-  background: #33CBF5;
+@use 'audioBars' {}body {
+  font-family: Times;
+  color: white;
 }
 
 a {
   text-decoration: none;
 }
 
-h2 {
-  text-align: center;
-  color: white;
-  font: 20px Times;
-}
-
-.gradient-text{
- background-color: #f3ec78;
- background-image: linear-gradient(45deg, #33CBF5, white);
- background-size: 100%;
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
-}
-
 h1 {
-  color: purple;
+  text-align: center;
+  font-size: 4em;
+  padding-bottom: 5%;
 }
 
-#ghost-body:hover{
-  opacity: 0;
-}
-
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -64.5px;
-  margin-top: -85.5px;
-}
-
-#B {
-  font-size: 100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -64.5px;
-  margin-top: -85.5px;
-}
-
-
-.ghost {
-  animation: float 3s ease-out infinite;
-}
-
-@keyframes float {
-  50% {
-   transform: translate(0, 20px);
- }
-}
-.shadowFrame {
-  width: 130px;
-  margin-top: 15px;
-}
-.shadow {
-  animation: shrink 3s ease-out infinite;
-  transform-origin: center center;
-  ellipse {
-    transform-origin: center center;
+@media screen and (max-device-width: 480px) {
+  h1 {
+    font-size: 5em;
   }
 }
 
-@keyframes shrink {
+/* ====== ICONS ====== */
+.iconrow {
+  text-align: center;
+}
+
+.iconrow .icon {
+  height: 100px;
+  padding-bottom: 50px;
+  -webkit-filter: saturate(30%) brightness(100%);
+          filter: saturate(30%) brightness(100%);
+}
+
+.iconrow .icon:hover {
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
+}
+
+@media screen and (max-device-width: 480px) {
+  .iconrow .icon {
+    padding-bottom: 13%;
+  }
+}
+
+/* ====== SEPARATE PAGE TO 2 HALVES ====== */
+.left,
+.right {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow: hidden;
+  padding-top: 5%;
+}
+
+.left {
+  left: 0;
+  width: 72%;
+  background: url("media/cyber.jpeg") no-repeat;
+  background-position: center;
+  -webkit-transform: scaleX(-1);
+  -webkit-filter: saturate(150%);
+          filter: saturate(150%);
+  background-size: cover;
+}
+
+.right {
+  right: 0;
+  background: url("media/cyber.jpeg") no-repeat;
+  background-size: cover;
+  background-position: left;
+  width: 29%;
+}
+
+/* limited space so don't render 'left' on mobile */
+@media screen and (max-device-width: 480px) {
+  .left {
+    width: 0%;
+    background: white;
+  }
+  .right {
+    width: 100%;
+  }
+}
+
+/* ====== OTHER ====== */
+.art-credit {
+  background-image: linear-gradient(45deg, #ADD2FF, white);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1em;
+}
+
+@media screen and (max-device-width: 480px) {
+  .art-credit {
+    font-size: 3em;
+  }
+}
+
+/* ====== GROOT ====== */
+#groot {
+  bottom: -600px;
+  left: 0;
+  position: absolute;
+  height: 600px;
+  -webkit-filter: saturate(50%);
+          filter: saturate(50%);
+}
+
+#groot:hover {
+  -webkit-filter: saturate(100%);
+          filter: saturate(100%);
+}
+
+@-webkit-keyframes grootMoveUp {
   0% {
-    width: 90%;
-    margin: 0 5%;
-  }
-  50% {
-    width: 60%;
-    margin: 0 18%;
+    bottom: -600px;
   }
   100% {
-    width: 90%;
-    margin: 0 5%;
+    bottom: -50px;
   }
 }
+
+@keyframes grootMoveUp {
+  0% {
+    bottom: -600px;
+  }
+  100% {
+    bottom: -50px;
+  }
+}
+
+@-webkit-keyframes grootMoveDown {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: -600px;
+  }
+}
+
+@keyframes grootMoveDown {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: -600px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
