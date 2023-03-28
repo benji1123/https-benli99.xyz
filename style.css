@@ -25,25 +25,30 @@ h1 {
   padding-bottom: 50px;
 }
 
-.iconrow .icon {
+.icon {
   height: 80px;
-  -webkit-filter: saturate(30%) brightness(100%);
-          filter: saturate(30%) brightness(100%);
+  -webkit-filter: saturate(5%) brightness(100%);
+          filter: saturate(5%) brightness(100%);
 }
 
-.iconrow .icon:hover {
-  -webkit-filter: saturate(100%);
-          filter: saturate(100%);
+.icon:hover {
+  -webkit-filter: saturate(55%);
+          filter: saturate(55%);
+  height: 95px;
 }
 
 @media screen and (max-device-width: 480px) {
-  .iconrow .iconrow {
-    text-align: center;
+  .iconrow {
     padding-bottom: 13%;
   }
-  .iconrow .icon {
+  .icon {
     height: 100px;
   }
+}
+
+#vinyl {
+  -webkit-animation: rotate 8s infinite linear;
+          animation: rotate 8s infinite linear;
 }
 
 @-webkit-keyframes rotate {
@@ -122,10 +127,9 @@ h1 {
 
 /* ====== GROOT ====== */
 #groot {
-  bottom: -500px;
-  left: 0;
+  bottom: -300px;
   position: absolute;
-  height: 500px;
+  height: 300px;
   -webkit-filter: saturate(50%);
           filter: saturate(50%);
 }
@@ -137,37 +141,37 @@ h1 {
 
 @-webkit-keyframes grootMoveUp {
   0% {
-    bottom: -500px;
+    bottom: -300px;
   }
   100% {
-    bottom: -50px;
+    bottom: -10px;
   }
 }
 
 @keyframes grootMoveUp {
   0% {
-    bottom: -500px;
+    bottom: -300px;
   }
   100% {
-    bottom: -50px;
+    bottom: -10px;
   }
 }
 
 @-webkit-keyframes grootMoveDown {
   0% {
-    bottom: -50px;
+    bottom: -10px;
   }
   100% {
-    bottom: -500px;
+    bottom: -300px;
   }
 }
 
 @keyframes grootMoveDown {
   0% {
-    bottom: -50px;
+    bottom: -10px;
   }
   100% {
-    bottom: -500px;
+    bottom: -300px;
   }
 }
 /*# sourceMappingURL=style.css.map */

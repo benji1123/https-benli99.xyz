@@ -22,17 +22,20 @@ h1
 .iconrow 
     text-align: center
     padding-bottom: 50px
-    .icon 
-        height: 80px
-        filter: saturate(30%) brightness(100%)
-    .icon:hover 
-        filter: saturate(100%)
-    @media screen and (max-device-width: $mobile)
-        .iconrow 
-            text-align: center
-            padding-bottom: 13%
-        .icon
-            height: 100px
+.icon 
+    height: 80px
+    filter: saturate(5%) brightness(100%)
+.icon:hover
+    filter: saturate(55%)
+    // TODO: size-increase shouldn't displace other elements
+    height: 95px
+@media screen and (max-device-width: $mobile)
+    .iconrow 
+        padding-bottom: 13%
+    .icon
+        height: 100px
+#vinyl
+    animation: rotate 8s infinite linear
 @keyframes rotate
     0%
         transform: rotate(0deg)
@@ -78,11 +81,15 @@ h1
         font-size: 3em
 
 /* ====== GROOT ====== */
-$grootHeight: 500px
-$grootMaxHeight: -50px
+$grootHeight: 300px
+$grootMaxY: -10px
+$grootMinY: -($grootHeight)
+@media screen and (max-device-width: $mobile)
+    $grootMaxY: -50px
+    $grootMinY: -($grootHeight)
+    $grootHeight: 500px
 #groot
     bottom: -($grootHeight)
-    left: 0
     position: absolute
     height: $grootHeight
     filter: saturate(50%)
@@ -91,12 +98,12 @@ $grootMaxHeight: -50px
 
 @keyframes grootMoveUp
     0%
-        bottom: -($grootHeight)
+        bottom: $grootMinY
     100%
-        bottom: $grootMaxHeight
+        bottom: $grootMaxY
 
 @keyframes grootMoveDown
     0%
-        bottom: $grootMaxHeight
+        bottom: $grootMaxY
     100%
-        bottom: -($grootHeight)
+        bottom: $grootMinY
