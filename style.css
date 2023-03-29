@@ -9,13 +9,15 @@ a {
 
 h1 {
   text-align: center;
-  font-size: 4em;
-  padding-bottom: 5%;
+  font-size: 3em;
+  padding-bottom: 30%;
+  color: black;
 }
 
 @media screen and (max-device-width: 480px) {
   h1 {
-    font-size: 5em;
+    padding-top: 10%;
+    font-size: 7em;
   }
 }
 
@@ -26,7 +28,7 @@ h1 {
 }
 
 .icon {
-  height: 80px;
+  height: 70px;
   -webkit-filter: saturate(5%) brightness(100%);
           filter: saturate(5%) brightness(100%);
 }
@@ -34,7 +36,7 @@ h1 {
 .icon:hover {
   -webkit-filter: saturate(55%);
           filter: saturate(55%);
-  height: 95px;
+  height: 85px;
 }
 
 @media screen and (max-device-width: 480px) {
@@ -42,7 +44,10 @@ h1 {
     padding-bottom: 13%;
   }
   .icon {
-    height: 100px;
+    height: 150px;
+  }
+  .icon:hover {
+    height: 150px;
   }
 }
 
@@ -116,12 +121,12 @@ h1 {
 /* ====== OTHER ====== */
 .art-credit {
   font-size: 1em;
-  color: white;
+  color: black;
 }
 
 @media screen and (max-device-width: 480px) {
   .art-credit {
-    font-size: 3em;
+    font-size: 2em;
   }
 }
 
@@ -144,7 +149,7 @@ h1 {
     bottom: -300px;
   }
   100% {
-    bottom: -10px;
+    bottom: -5px;
   }
 }
 
@@ -153,13 +158,13 @@ h1 {
     bottom: -300px;
   }
   100% {
-    bottom: -10px;
+    bottom: -5px;
   }
 }
 
 @-webkit-keyframes grootMoveDown {
   0% {
-    bottom: -10px;
+    bottom: -5px;
   }
   100% {
     bottom: -300px;
@@ -168,7 +173,7 @@ h1 {
 
 @keyframes grootMoveDown {
   0% {
-    bottom: -10px;
+    bottom: -5px;
   }
   100% {
     bottom: -300px;

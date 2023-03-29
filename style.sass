@@ -1,10 +1,9 @@
-// run `sass mestyle.scss mestyle.css`
 @use 'audioBars'
 
 $mobile: 480px
-// TODO: edit photo so i don't have to apply CSS filters
 $left-background: "media/cyber.jpeg"
 $right-background: "media/cyber-blur2.png"
+$text-color: black
 
 body
     font-family: Times
@@ -13,27 +12,32 @@ a
     text-decoration: none
 h1 
     text-align: center
-    font-size: 4em
-    padding-bottom: 5%
+    font-size: 3em
+    padding-bottom: 30%
+    color: $text-color
     @media screen and (max-device-width: $mobile)
-        font-size: 5em
+        padding-top: 10%
+        font-size: 7em
 
 /* ====== ICONS ====== */
 .iconrow 
     text-align: center
     padding-bottom: 50px
 .icon 
-    height: 80px
+    height: 70px
     filter: saturate(5%) brightness(100%)
 .icon:hover
     filter: saturate(55%)
     // TODO: size-increase shouldn't displace other elements
-    height: 95px
+    height: 85px
 @media screen and (max-device-width: $mobile)
     .iconrow 
         padding-bottom: 13%
     .icon
-        height: 100px
+        height: 150px
+    .icon:hover
+        // TODO: size-increase shouldn't displace other elements
+        height: 150px
 #vinyl
     animation: rotate 8s infinite linear
 @keyframes rotate
@@ -76,18 +80,18 @@ h1
 /* ====== OTHER ====== */
 .art-credit 
     font-size: 1em
-    color: white
+    color: black
     @media screen and (max-device-width: $mobile)
-        font-size: 3em
+        font-size: 2em
 
 /* ====== GROOT ====== */
 $grootHeight: 300px
-$grootMaxY: -10px
+$grootMaxY: -5px
 $grootMinY: -($grootHeight)
 @media screen and (max-device-width: $mobile)
+    $grootHeight: 500px
     $grootMaxY: -50px
     $grootMinY: -($grootHeight)
-    $grootHeight: 500px
 #groot
     bottom: -($grootHeight)
     position: absolute

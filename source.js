@@ -1,7 +1,8 @@
 let MUSIC_PLAYING = false;
+const NUM_SONGS = 4;
 
-const i = Math.floor(Math.random() * 2) + 1;
-const MUSIC = new Audio(`media/audio/${i}.mp3`);
+const randomSongIndex = Math.floor(Math.random() * NUM_SONGS) + 1;
+const MUSIC = new Audio(`media/audio/${4}.mp3`);
 const citySounds = new Audio('media/audio/citySounds.mp3');
 const recordScratchFx1 = new Audio('media/audio/record-scratch.mp3');
 const recordScratchFx2 = new Audio('media/audio/record-scratch.mp3');
@@ -13,7 +14,7 @@ function toggleMusic() {
         // TODO: play a disc scratch sound fx
         recordScratchFx2.play()
         MUSIC.pause();
-        groot.style.animation="grootMoveDown 4s forwards";
+        groot.style.animation="grootMoveDown 2s forwards";
         vinyl.style.animation=""; // stop rotating icon
     } else {
         
