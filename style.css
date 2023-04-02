@@ -92,7 +92,7 @@ h1 {
 .left {
   left: 0;
   width: 72%;
-  background: url("media/cyber/cyber.jpeg") no-repeat;
+  background: url("media/background/cyber/cyber.gif") no-repeat;
   background-position: center;
   -webkit-filter: saturate(150%);
           filter: saturate(150%);
@@ -101,7 +101,7 @@ h1 {
 
 .right {
   right: 0;
-  background: url("media/cyber/cyber-blur2.png") no-repeat;
+  background: url("media/background/cyber/cyber-blur2.png") no-repeat;
   background-size: cover;
   background-position: center;
   width: 29%;
