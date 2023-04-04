@@ -2,10 +2,10 @@ let MUSIC_PLAYING = false;
 const NUM_SONGS = 4;
 
 const randomSongIndex = Math.floor(Math.random() * NUM_SONGS) + 1;
-const MUSIC = new Audio(`media/audio/${4}.mp3`);
-const citySounds = new Audio('media/audio/citySounds.mp3');
-const recordScratchFx1 = new Audio('media/audio/record-scratch.mp3');
-const recordScratchFx2 = new Audio('media/audio/record-scratch.mp3');
+const MUSIC = new Audio("https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/audio/4.mp3");
+const citySounds = new Audio('https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/audio/citySounds.mp3');
+const recordScratchFx1 = new Audio('https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/audio/record-scratch.mp3');
+const recordScratchFx2 = new Audio('https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/audio/record-scratch.mp3');
 
 function toggleMusic() {
     const groot = document.getElementById('groot')
