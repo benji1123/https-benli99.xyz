@@ -47,6 +47,8 @@ h1
         transform: rotate(360deg)
 
 /* ====== SEPARATE PAGE TO 2 HALVES ====== */
+$left-width: 92%
+$right-width: 9%
 .left,
 .right 
     height: 100%
@@ -57,7 +59,7 @@ h1
     padding-top: 5%
 .left
     left: 0
-    width: 72%
+    width: $left-width
     background: url($left-background) no-repeat
     // filter: saturate(15%)
     background-position: center
@@ -68,7 +70,7 @@ h1
     background: url($right-background) no-repeat
     background-size: cover
     background-position: center
-    width: 29%
+    width: $right-width
 /* limited space so don't render 'left' on mobile */
 @media screen and (max-device-width: $mobile)
     .left 
