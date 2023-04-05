@@ -10,20 +10,33 @@ body
     color: white
 a
     text-decoration: none
-h1 
+h1
     text-align: center
     font-size: 3em
-    padding-bottom: 30%
+    margin-bottom: 30%
     color: $text-color
     @media screen and (max-device-width: $mobile)
         padding-top: 10%
         font-size: 7em
 
+/* ====== MEDIA ====== */
+.media
+    opacity: 50%
+.instagram-media
+    background: #FFF
+    border: none
+    border-radius: 3px
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5), 0px 1px 10px 0px rgba(0,0,0,0.15) 
+    margin: 1px 
+    max-width: 540px 
+    min-width: 326px
+    display: inline
+    padding-bottom: 10px
 /* ====== ICONS ====== */
-.iconrow 
+.iconrow
     text-align: center
     padding-bottom: 50px
-.icon 
+.icon
     height: 70px
     filter: saturate(5%) brightness(100%)
 .icon:hover
@@ -31,7 +44,7 @@ h1
     // TODO: size-increase shouldn't displace other elements
     height: 85px
 @media screen and (max-device-width: $mobile)
-    .iconrow 
+    .iconrow
         padding-bottom: 13%
     .icon
         height: 150px
@@ -50,22 +63,21 @@ h1
 $left-width: 92%
 $right-width: 9%
 .left,
-.right 
+.right
     height: 100%
     position: fixed
     z-index: 1
     top: 0
-    overflow: hidden // don't render scrollbar during CSS animation
+    overflow: auto
     padding-top: 5%
 .left
     left: 0
     width: $left-width
     background: url($left-background) no-repeat
-    // filter: saturate(15%)
     background-position: center
     filter: saturate(150%)
     background-size: cover
-.right 
+.right
     right: 0
     background: url($right-background) no-repeat
     background-size: cover
@@ -73,13 +85,13 @@ $right-width: 9%
     width: $right-width
 /* limited space so don't render 'left' on mobile */
 @media screen and (max-device-width: $mobile)
-    .left 
+    .left
         width: 100%
-    .right 
+    .right
         width: 0%
 
 /* ====== OTHER ====== */
-.art-credit 
+.art-credit
     font-size: 1em
     color: black
     @media screen and (max-device-width: $mobile)

@@ -10,7 +10,7 @@ a {
 h1 {
   text-align: center;
   font-size: 3em;
-  padding-bottom: 30%;
+  margin-bottom: 30%;
   color: black;
 }
 
@@ -19,6 +19,24 @@ h1 {
     padding-top: 10%;
     font-size: 7em;
   }
+}
+
+/* ====== MEDIA ====== */
+.media {
+  opacity: 50%;
+}
+
+.instagram-media {
+  background: #FFF;
+  border: none;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5), 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5), 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+  margin: 1px;
+  max-width: 540px;
+  min-width: 326px;
+  display: inline;
+  padding-bottom: 10px;
 }
 
 /* ====== ICONS ====== */
@@ -85,7 +103,7 @@ h1 {
   position: fixed;
   z-index: 1;
   top: 0;
-  overflow: hidden;
+  overflow: auto;
   padding-top: 5%;
 }
 
