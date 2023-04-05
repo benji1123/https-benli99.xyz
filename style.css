@@ -110,11 +110,10 @@ h1 {
 /* limited space so don't render 'left' on mobile */
 @media screen and (max-device-width: 480px) {
   .left {
-    width: 0%;
-    background: white;
+    width: 100%;
   }
   .right {
-    width: 100%;
+    width: 0%;
   }
 }
 
