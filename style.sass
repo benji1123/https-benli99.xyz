@@ -1,52 +1,85 @@
-@use 'audioBars'
-
+// CONTAINER DIMENSIONS
 $mobile: 480px
-$left-background: "media/background/cyber/cyber.jpeg" // placeholder for lazy-loaded GIF background (see JS)
-$right-background: "media/background/cyber/cyber-blur2.png"
-$text-color: black
+$left-width: 100%
+$left-background: "media/background/cyber/cyber.jpeg" // placeholder for 40 MB GIF background
+
+$website-top-padding-desktop: 50px
+$website-top-padding-mobile: 200px
+
+//ICONS
+$icon-width-desktop: 70px
+$icon-width-mobile: 130px
+$inter-icon-spacing-desktop: 50px
+$inter-icon-spacing-mobile: 60px
+
+// COLOR
+$icon-color-desktop: #f2a083 // salmon
+$icon-color-mobile: #f2a083
+
+// TEXT
+$main-text-color: #f2a083
+$art-credit-font-size-desktop: 1em
+$art-credit-font-size-mobile: 5em
+
+// GENERAL
+.center-vertical
+    margin: 0
+    position: absolute
+    top: 50%
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
+.center-horizontal
+    margin: 0
+    position: absolute
+    left: 50%
+    -ms-transform: translateX(-50%)
+    transform: translateX(-50%)
 
 body
-    font-family: Times
+    font-family: Futura
     color: white
 a
     text-decoration: none
 h1
     text-align: center
     font-size: 3em
-    color: $text-color
+    color: $main-text-color
     @media screen and (max-device-width: $mobile)
-        padding-top: 10%
-        font-size: 7em
+        font-size: $art-credit-font-size-mobile
 
-/* ====== MEDIA ====== */
-.media
-    opacity: 50%
-.instagram-media
-    background: #FFF
-    border: none
-    border-radius: 3px
-    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5), 0px 1px 10px 0px rgba(0,0,0,0.15) 
-    margin: 1px 
-    max-width: 540px 
-    min-width: 326px
-    display: inline
-    padding-bottom: 10px
+#cyber-container
+    top: 0
+    height: 100%
+    width: $left-width
+    filter: saturate(150%)
+
+    top-padding: $website-top-padding-desktop
+    @media screen and (max-device-width: $mobile)
+        top-padding: $website-top-padding-mobile
+
+    background: url($left-background) no-repeat
+    background-position: left
+    background-size: cover
+
+/* ====== OTHER ====== */
+.art-credit
+    font-size: $art-credit-font-size-desktop
+    color: $main-text-color
+
 /* ====== ICONS ====== */
 .iconrow
-    text-align: center
-    padding-bottom: 50px
+    padding-bottom: $inter-icon-spacing-desktop
+    @media screen and (max-device-width: $mobile)
+        padding-bottom: $inter-icon-spacing-mobile
 .icon
-    height: 50px
-    filter: saturate(50%) brightness(0)
+    fill: $icon-color-desktop
+    width: $icon-width-desktop
+    @media screen and (max-device-width: $mobile)
+        fill: $icon-color-mobile
+        width:  $icon-width-mobile
 .icon:hover
-    filter: saturate(50%) brightness(1)
-@media screen and (max-device-width: $mobile)
-    .iconrow
-        padding-bottom: 13%
-    .icon
-        height: 150px
-    .icon:hover
-        height: 150px
+    // TODO: create tooltip on hover (reference Mac OS dock)
+    filter: brightness(2)
 #vinyl
     animation: rotate 8s infinite linear
 @keyframes rotate
@@ -54,69 +87,3 @@ h1
         transform: rotate(0deg)
     100%
         transform: rotate(360deg)
-
-/* ====== SEPARATE PAGE TO 2 HALVES ====== */
-$left-width: 93%
-$right-width: 8%
-#left,
-.right
-    height: 100%
-    position: fixed
-    z-index: 1
-    top: 0
-    overflow: auto
-    padding-top: 5%
-#left
-    left: 0
-    width: $left-width
-    background: url($left-background) no-repeat
-    background-position: left
-    filter: saturate(150%)
-    background-size: cover
-.right
-    right: 0
-    background: url($right-background) no-repeat
-    background-size: cover
-    background-position: center
-    width: $right-width
-/* limited space so don't render 'left' on mobile */
-@media screen and (max-device-width: $mobile)
-    #left
-        width: 100%
-    .right
-        width: 0%
-
-/* ====== OTHER ====== */
-.art-credit
-    font-size: 1em
-    color: black
-    @media screen and (max-device-width: $mobile)
-        font-size: 2em
-
-/* ====== GROOT ====== */
-$grootHeight: 300px
-$grootMaxY: -5px
-$grootMinY: -($grootHeight)
-@media screen and (max-device-width: $mobile)
-    $grootHeight: 500px
-    $grootMaxY: -50px
-    $grootMinY: -($grootHeight)
-#groot
-    bottom: -($grootHeight)
-    position: absolute
-    height: $grootHeight
-    filter: saturate(50%)
-#groot:hover
-    filter: saturate(100%)
-
-@keyframes grootMoveUp
-    0%
-        bottom: $grootMinY
-    100%
-        bottom: $grootMaxY
-
-@keyframes grootMoveDown
-    0%
-        bottom: $grootMaxY
-    100%
-        bottom: $grootMinY

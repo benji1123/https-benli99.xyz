@@ -1,5 +1,21 @@
-@use 'audioBars' {}body {
-  font-family: Times;
+.center-vertical {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.center-horizontal {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body {
+  font-family: Futura;
   color: white;
 }
 
@@ -10,61 +26,65 @@ a {
 h1 {
   text-align: center;
   font-size: 3em;
-  color: black;
+  color: #f2a083;
 }
 
 @media screen and (max-device-width: 480px) {
   h1 {
-    padding-top: 10%;
-    font-size: 7em;
+    font-size: 5em;
   }
 }
 
-/* ====== MEDIA ====== */
-.media {
-  opacity: 50%;
+#cyber-container {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-filter: saturate(150%);
+          filter: saturate(150%);
+  top-padding: 50px;
+  background: url("media/background/cyber/cyber.jpeg") no-repeat;
+  background-position: left;
+  background-size: cover;
 }
 
-.instagram-media {
-  background: #FFF;
-  border: none;
-  border-radius: 3px;
-  -webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5), 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5), 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
-  margin: 1px;
-  max-width: 540px;
-  min-width: 326px;
-  display: inline;
-  padding-bottom: 10px;
+@media screen and (max-device-width: 480px) {
+  #cyber-container {
+    top-padding: 200px;
+  }
+}
+
+/* ====== OTHER ====== */
+.art-credit {
+  font-size: 1em;
+  color: #f2a083;
 }
 
 /* ====== ICONS ====== */
 .iconrow {
-  text-align: center;
   padding-bottom: 50px;
-}
-
-.icon {
-  height: 50px;
-  -webkit-filter: saturate(50%) brightness(0);
-          filter: saturate(50%) brightness(0);
-}
-
-.icon:hover {
-  -webkit-filter: saturate(50%) brightness(1);
-          filter: saturate(50%) brightness(1);
 }
 
 @media screen and (max-device-width: 480px) {
   .iconrow {
-    padding-bottom: 13%;
+    padding-bottom: 60px;
   }
+}
+
+.icon {
+  fill: #f2a083;
+  width: 70px;
+}
+
+@media screen and (max-device-width: 480px) {
   .icon {
-    height: 150px;
+    fill: #f2a083;
+    width: 130px;
   }
-  .icon:hover {
-    height: 150px;
-  }
+}
+
+.icon:hover {
+  -webkit-filter: brightness(2);
+          filter: brightness(2);
 }
 
 #vinyl {
@@ -91,107 +111,6 @@ h1 {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
-  }
-}
-
-/* ====== SEPARATE PAGE TO 2 HALVES ====== */
-#left,
-.right {
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow: auto;
-  padding-top: 5%;
-}
-
-#left {
-  left: 0;
-  width: 93%;
-  background: url("media/background/cyber/cyber.jpeg") no-repeat;
-  background-position: left;
-  -webkit-filter: saturate(150%);
-          filter: saturate(150%);
-  background-size: cover;
-}
-
-.right {
-  right: 0;
-  background: url("media/background/cyber/cyber-blur2.png") no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 8%;
-}
-
-/* limited space so don't render 'left' on mobile */
-@media screen and (max-device-width: 480px) {
-  #left {
-    width: 100%;
-  }
-  .right {
-    width: 0%;
-  }
-}
-
-/* ====== OTHER ====== */
-.art-credit {
-  font-size: 1em;
-  color: black;
-}
-
-@media screen and (max-device-width: 480px) {
-  .art-credit {
-    font-size: 2em;
-  }
-}
-
-/* ====== GROOT ====== */
-#groot {
-  bottom: -300px;
-  position: absolute;
-  height: 300px;
-  -webkit-filter: saturate(50%);
-          filter: saturate(50%);
-}
-
-#groot:hover {
-  -webkit-filter: saturate(100%);
-          filter: saturate(100%);
-}
-
-@-webkit-keyframes grootMoveUp {
-  0% {
-    bottom: -300px;
-  }
-  100% {
-    bottom: -5px;
-  }
-}
-
-@keyframes grootMoveUp {
-  0% {
-    bottom: -300px;
-  }
-  100% {
-    bottom: -5px;
-  }
-}
-
-@-webkit-keyframes grootMoveDown {
-  0% {
-    bottom: -5px;
-  }
-  100% {
-    bottom: -300px;
-  }
-}
-
-@keyframes grootMoveDown {
-  0% {
-    bottom: -5px;
-  }
-  100% {
-    bottom: -300px;
   }
 }
 /*# sourceMappingURL=style.css.map */
