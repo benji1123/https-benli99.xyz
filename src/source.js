@@ -1,21 +1,31 @@
-let MUSIC_PLAYING = false;
-const NUM_SONGS = 4;
+const ANIMATED_BACKGROUND = 'https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber5fps_lights_looped.gif';
 
-const randomSongIndex = Math.floor(Math.random() * NUM_SONGS) + 1;
+const loadAnimatedBackground = async () => {
+    const imageBlob = await fetch(ANIMATED_BACKGROUND).then(resp => {
+        return resp;
+    })
+    console.log(`fetched image: ${ANIMATED_BACKGROUND}`);
+    const bgrndURL = imageBlob.url;
+    const left = document.getElementById('left');
+    left.style.backgroundImage = `url(${bgrndURL})`;
+    URL.revokeObjectURL(bgrndURL);
+}
+
+let MUSIC_PLAYING = false;
 const MUSIC = new Audio("https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/audio/4.mp3");
 const citySounds = new Audio('https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/audio/citySounds.mp3');
 const recordScratchFx1 = new Audio('https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/audio/record-scratch.mp3');
 const recordScratchFx2 = new Audio('https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/audio/record-scratch.mp3');
 
-function toggleMusic() {
+const toggleMusic = () => {
     const groot = document.getElementById('groot')
     const vinyl = document.getElementById('vinyl')
     if (MUSIC_PLAYING) {
-        // TODO: play a disc scratch sound fx
         recordScratchFx2.play()
         MUSIC.pause();
         groot.style.animation="grootMoveDown 2s forwards";
-        vinyl.style.animation=""; // stop rotating icon
+        // stop rotating icon
+        vinyl.style.animation="";
     } else {
         
         recordScratchFx1.play();

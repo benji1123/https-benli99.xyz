@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<script type="text/javascript" src="source.js"></script>
+<script type="text/javascript" src="src/source.js" onload="loadAnimatedBackground()"></script>
 <html>
 
 <head>
@@ -10,9 +10,9 @@
 
 <body>
   <!-- MAIN DIV -->
-  <div class="left">
+  <div class="left" id="left">
     <div class="iconrow">
-      <h1>Ben / 沐祥</h1>
+      <h1> Ben / 沐祥</h1>
       <h2 class="art-credit">BASE DRAWING BY</h2>
       <a href="https://www.artstation.com/artwork/JlPaed" target="blank">
         <h2 class="art-credit">JlPaed</h2>
@@ -45,7 +45,7 @@
   <div class="right">
     <h1 id="name"> </h1>
     <div class="iconrow">
-      <img class="icon" id="vinyl" onclick="toggleMusic()" src="media/icons/vinyl.svg" />
+      <img class="icon" id="vinyl" src="media/icons/vinyl.svg" />
     </div>
     <div class="iconrow">
       <a href="https://top.gg/bot/774732068282171424" target="blank">

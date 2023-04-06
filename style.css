@@ -45,7 +45,7 @@ h1 {
 }
 
 .icon {
-  height: 70px;
+  height: 50px;
   -webkit-filter: saturate(50%) brightness(0);
           filter: saturate(50%) brightness(0);
 }
@@ -95,7 +95,7 @@ h1 {
 }
 
 /* ====== SEPARATE PAGE TO 2 HALVES ====== */
-.left,
+#left,
 .right {
   height: 100%;
   position: fixed;
@@ -105,10 +105,10 @@ h1 {
   padding-top: 5%;
 }
 
-.left {
+#left {
   left: 0;
   width: 93%;
-  background: url("https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber5fps_lights_looped.gif") no-repeat;
+  background: url("media/background/cyber/cyber.jpeg") no-repeat;
   background-position: left;
   -webkit-filter: saturate(150%);
           filter: saturate(150%);
@@ -125,7 +125,7 @@ h1 {
 
 /* limited space so don't render 'left' on mobile */
 @media screen and (max-device-width: 480px) {
-  .left {
+  #left {
     width: 100%;
   }
   .right {

@@ -1,9 +1,7 @@
 @use 'audioBars'
 
 $mobile: 480px
-// To keep image load-time acceptable, GIF is rendered with with bad quality (720p & 5 FPS)
-// TODO: lazy load the 1080p ver of GIF?
-$left-background: "https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber5fps_lights_looped.gif"
+$left-background: "media/background/cyber/cyber.jpeg" // placeholder for lazy-loaded GIF background (see JS)
 $right-background: "media/background/cyber/cyber-blur2.png"
 $text-color: black
 
@@ -38,7 +36,7 @@ h1
     text-align: center
     padding-bottom: 50px
 .icon
-    height: 70px
+    height: 50px
     filter: saturate(50%) brightness(0)
 .icon:hover
     filter: saturate(50%) brightness(1)
@@ -60,7 +58,7 @@ h1
 /* ====== SEPARATE PAGE TO 2 HALVES ====== */
 $left-width: 93%
 $right-width: 8%
-.left,
+#left,
 .right
     height: 100%
     position: fixed
@@ -68,7 +66,7 @@ $right-width: 8%
     top: 0
     overflow: auto
     padding-top: 5%
-.left
+#left
     left: 0
     width: $left-width
     background: url($left-background) no-repeat
@@ -83,7 +81,7 @@ $right-width: 8%
     width: $right-width
 /* limited space so don't render 'left' on mobile */
 @media screen and (max-device-width: $mobile)
-    .left
+    #left
         width: 100%
     .right
         width: 0%
