@@ -1,4 +1,4 @@
-const ANIMATED_BACKGROUND = 'https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber5fps_lights_looped.gif';
+const ANIMATED_BACKGROUND = 'https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber.gif';
 
 const loadAnimatedBackground = async () => {
     const imageBlob = await fetch(ANIMATED_BACKGROUND).then(resp => {
