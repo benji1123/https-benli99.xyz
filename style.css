@@ -10,7 +10,6 @@ a {
 h1 {
   text-align: center;
   font-size: 3em;
-  margin-bottom: 30%;
   color: black;
 }
 
@@ -47,14 +46,13 @@ h1 {
 
 .icon {
   height: 70px;
-  -webkit-filter: saturate(5%) brightness(100%);
-          filter: saturate(5%) brightness(100%);
+  -webkit-filter: saturate(50%) brightness(0);
+          filter: saturate(50%) brightness(0);
 }
 
 .icon:hover {
-  -webkit-filter: saturate(55%);
-          filter: saturate(55%);
-  height: 85px;
+  -webkit-filter: saturate(50%) brightness(1);
+          filter: saturate(50%) brightness(1);
 }
 
 @media screen and (max-device-width: 480px) {
@@ -109,9 +107,9 @@ h1 {
 
 .left {
   left: 0;
-  width: 92%;
-  background: url("https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber2_5fps_looped.gif") no-repeat;
-  background-position: center;
+  width: 93%;
+  background: url("https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber5fps_lights_looped.gif") no-repeat;
+  background-position: left;
   -webkit-filter: saturate(150%);
           filter: saturate(150%);
   background-size: cover;
@@ -122,7 +120,7 @@ h1 {
   background: url("media/background/cyber/cyber-blur2.png") no-repeat;
   background-size: cover;
   background-position: center;
-  width: 9%;
+  width: 8%;
 }
 
 /* limited space so don't render 'left' on mobile */

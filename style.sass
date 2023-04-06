@@ -1,7 +1,9 @@
 @use 'audioBars'
 
 $mobile: 480px
-$left-background: "https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber2_5fps_looped.gif" // 4.3 MB
+// To keep image load-time acceptable, GIF is rendered with with bad quality (720p & 5 FPS)
+// TODO: lazy load the 1080p ver of GIF?
+$left-background: "https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber5fps_lights_looped.gif"
 $right-background: "media/background/cyber/cyber-blur2.png"
 $text-color: black
 
@@ -13,7 +15,6 @@ a
 h1
     text-align: center
     font-size: 3em
-    margin-bottom: 30%
     color: $text-color
     @media screen and (max-device-width: $mobile)
         padding-top: 10%
@@ -38,18 +39,15 @@ h1
     padding-bottom: 50px
 .icon
     height: 70px
-    filter: saturate(5%) brightness(100%)
+    filter: saturate(50%) brightness(0)
 .icon:hover
-    filter: saturate(55%)
-    // TODO: size-increase shouldn't displace other elements
-    height: 85px
+    filter: saturate(50%) brightness(1)
 @media screen and (max-device-width: $mobile)
     .iconrow
         padding-bottom: 13%
     .icon
         height: 150px
     .icon:hover
-        // TODO: size-increase shouldn't displace other elements
         height: 150px
 #vinyl
     animation: rotate 8s infinite linear
@@ -60,8 +58,8 @@ h1
         transform: rotate(360deg)
 
 /* ====== SEPARATE PAGE TO 2 HALVES ====== */
-$left-width: 92%
-$right-width: 9%
+$left-width: 93%
+$right-width: 8%
 .left,
 .right
     height: 100%
@@ -74,7 +72,7 @@ $right-width: 9%
     left: 0
     width: $left-width
     background: url($left-background) no-repeat
-    background-position: center
+    background-position: left
     filter: saturate(150%)
     background-size: cover
 .right
