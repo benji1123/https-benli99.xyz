@@ -2,16 +2,23 @@
 
 // CONTAINER DIMENSIONS
 $mobile: 480px
-$left-width: 100%
+$left-width: 90%
 $left-background: "media/background/cyber/cyber.jpeg" // placeholder for 40 MB GIF background
 
 $website-top-padding-desktop: 50px
 $website-top-padding-mobile: 200px
 
+// BORDER CONTROL
+// goal: render cinematic black bars (top & bottom only)
+$body-background-color: black
+$cyber-container-width: 100%;
+$cyber-container-height-desktop: 85%; // border = 100% - 85%
+$cyber-container-height-mobile: 100%; // border would be weird on mobile
+
 //ICONS
-$icon-width-desktop: 70px
+$icon-width-desktop: 50px
 $icon-width-mobile: 130px
-$inter-icon-spacing-desktop: 50px
+$inter-icon-spacing-desktop: 30px
 $inter-icon-spacing-mobile: 60px
 
 // COLOR
@@ -36,10 +43,16 @@ $art-credit-font-size-mobile: 5em
     left: 50%
     -ms-transform: translateX(-50%)
     transform: translateX(-50%)
-
+.center
+  margin: 0
+  position: absolute
+  top: 50%
+  left: 50%
+  -ms-transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%)
 body
     font-family: Futura
-    color: white
+    background: $body-background-color
 a
     text-decoration: none
 h1
@@ -51,18 +64,19 @@ h1
         font-size: $art-credit-font-size-mobile
 
 #cyber-container
-    top: 0
-    height: 100%
-    width: $left-width
+    background: url($left-background) no-repeat
+    background-size: cover
+    // top: 0
+    height: $cyber-container-height-desktop
+    width: $cyber-container-width
     filter: saturate(150%)
 
-    top-padding: $website-top-padding-desktop
+    // padding
+    // top-padding: $website-top-padding-desktop
     @media screen and (max-device-width: $mobile)
+        height: $cyber-container-height-mobile
         top-padding: $website-top-padding-mobile
-
-    background: url($left-background) no-repeat
-    background-position: left
-    background-size: cover
+        background-position: left
 
 /* ====== OTHER ====== */
 .art-credit
@@ -71,15 +85,15 @@ h1
 
 /* ====== ICONS ====== */
 .iconrow
-    padding-bottom: $inter-icon-spacing-desktop
+    padding-top: $inter-icon-spacing-desktop
     @media screen and (max-device-width: $mobile)
-        padding-bottom: $inter-icon-spacing-mobile
+        padding-top: $inter-icon-spacing-mobile
 .icon
     fill: $icon-color-desktop
     width: $icon-width-desktop
     @media screen and (max-device-width: $mobile)
         fill: $icon-color-mobile
-        width:  $icon-width-mobile
+        width: $icon-width-mobile
 .icon:hover
     // TODO: create tooltip on hover (reference Mac OS dock)
     filter: brightness(2)

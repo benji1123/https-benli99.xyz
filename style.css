@@ -14,9 +14,18 @@
           transform: translateX(-50%);
 }
 
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 body {
   font-family: Futura;
-  color: white;
+  background: black;
 }
 
 a {
@@ -37,20 +46,19 @@ h1 {
 }
 
 #cyber-container {
-  top: 0;
-  height: 100%;
+  background: url("media/background/cyber/cyber.jpeg") no-repeat;
+  background-size: cover;
+  height: 85%;
   width: 100%;
   -webkit-filter: saturate(150%);
           filter: saturate(150%);
-  top-padding: 50px;
-  background: url("media/background/cyber/cyber.jpeg") no-repeat;
-  background-position: left;
-  background-size: cover;
 }
 
 @media screen and (max-device-width: 480px) {
   #cyber-container {
+    height: 100%;
     top-padding: 200px;
+    background-position: left;
   }
 }
 
@@ -62,18 +70,18 @@ h1 {
 
 /* ====== ICONS ====== */
 .iconrow {
-  padding-bottom: 50px;
+  padding-top: 30px;
 }
 
 @media screen and (max-device-width: 480px) {
   .iconrow {
-    padding-bottom: 60px;
+    padding-top: 60px;
   }
 }
 
 .icon {
   fill: #f2a083;
-  width: 70px;
+  width: 50px;
 }
 
 @media screen and (max-device-width: 480px) {
