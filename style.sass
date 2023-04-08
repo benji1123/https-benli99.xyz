@@ -19,7 +19,7 @@ $cyber-container-height-mobile: 100%; // border would be weird on mobile
 $icon-width-desktop: 50px
 $icon-width-mobile: 130px
 $inter-icon-spacing-desktop: 30px
-$inter-icon-spacing-mobile: 60px
+$inter-icon-spacing-mobile: 90px
 
 // COLOR
 $icon-color-desktop: #f2a083 // salmon
@@ -27,6 +27,9 @@ $icon-color-mobile: #f2a083
 
 // TEXT
 $main-text-color: #f2a083
+$header-font-size-desktop: 5em
+$header-font-size-mobile: 5em
+    
 $art-credit-font-size-desktop: 1em
 $art-credit-font-size-mobile: 5em
 
@@ -58,10 +61,11 @@ a
 h1
     font-family: Futura
     text-align: center
-    font-size: 3em
+    font-size: $header-font-size-desktop
     color: $main-text-color
+    margin-bottom: 0em
     @media screen and (max-device-width: $mobile)
-        font-size: $art-credit-font-size-mobile
+        font-size: $header-font-size-mobile
 
 #cyber-container
     background: url($left-background) no-repeat
@@ -89,6 +93,7 @@ h1
     @media screen and (max-device-width: $mobile)
         padding-top: $inter-icon-spacing-mobile
 .icon
+    opacity: 60%
     fill: $icon-color-desktop
     width: $icon-width-desktop
     @media screen and (max-device-width: $mobile)

@@ -35,8 +35,9 @@ a {
 h1 {
   font-family: Futura;
   text-align: center;
-  font-size: 3em;
+  font-size: 5em;
   color: #f2a083;
+  margin-bottom: 0em;
 }
 
 @media screen and (max-device-width: 480px) {
@@ -75,11 +76,12 @@ h1 {
 
 @media screen and (max-device-width: 480px) {
   .iconrow {
-    padding-top: 60px;
+    padding-top: 90px;
   }
 }
 
 .icon {
+  opacity: 60%;
   fill: #f2a083;
   width: 50px;
 }
