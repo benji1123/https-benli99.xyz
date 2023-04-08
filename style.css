@@ -35,7 +35,7 @@ a {
 h1 {
   font-family: Futura;
   text-align: center;
-  font-size: 5em;
+  font-size: 4em;
   color: #f2a083;
   margin-bottom: 0em;
 }
@@ -65,8 +65,9 @@ h1 {
 
 /* ====== OTHER ====== */
 .art-credit {
-  font-size: 1em;
+  font-size: 0.7em;
   color: #f2a083;
+  text-align: center;
 }
 
 /* ====== ICONS ====== */
