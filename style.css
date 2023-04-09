@@ -32,18 +32,34 @@ a {
   text-decoration: none;
 }
 
-h1 {
+.name {
   font-family: Futura;
   text-align: center;
   font-size: 4em;
   color: #f2a083;
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 
 @media screen and (max-device-width: 480px) {
-  h1 {
-    font-size: 5em;
+  #english-name {
+    display: none;
   }
+}
+
+#chinese-name {
+  display: none;
+}
+
+@media screen and (max-device-width: 480px) {
+  #chinese-name {
+    display: inline;
+  }
+}
+
+.chinese-char {
+  margin: 0;
+  padding: 0.1em;
+  font-size: 4.5em;
 }
 
 #cyber-container {
@@ -102,6 +118,12 @@ h1 {
 #vinyl {
   -webkit-animation: rotate 8s infinite linear;
           animation: rotate 8s infinite linear;
+}
+
+@media screen and (max-device-width: 480px) {
+  #vinyl {
+    display: none;
+  }
 }
 
 @-webkit-keyframes rotate {

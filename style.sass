@@ -10,9 +10,9 @@ $website-top-padding-mobile: 200px
 // BORDER CONTROL
 // goal: render cinematic black bars (top & bottom only)
 $body-background-color: black
-$cyber-container-width: 100%;
-$cyber-container-height-desktop: 80%; // border = 100% - 85%
-$cyber-container-height-mobile: 100%; // border would be weird on mobile
+$cyber-container-width: 100%
+$cyber-container-height-desktop: 80% // border = 100% - 85%
+$cyber-container-height-mobile: 100% // border would be weird on mobile
 
 //ICONS
 $icon-width-desktop: 50px
@@ -26,8 +26,9 @@ $icon-color-mobile: #f2a083
 
 // TEXT
 $main-text-color: #f2a083
+$darkened-main-text-color: #f5835b
 $header-font-size-desktop: 4em
-$header-font-size-mobile: 5em
+$header-font-size-mobile: 6em
     
 $art-credit-font-size-desktop: 0.7em
 $art-credit-font-size-mobile: 5em
@@ -57,19 +58,29 @@ body
     background: $body-background-color
 a
     text-decoration: none
-h1
+.name
     font-family: Futura
     text-align: center
+    // text-shadow: white 0 0 7px
     font-size: $header-font-size-desktop
     color: $main-text-color
-    margin-bottom: 0em
+    margin-bottom: 0
+#english-name
     @media screen and (max-device-width: $mobile)
-        font-size: $header-font-size-mobile
+        display: none
+#chinese-name
+    // chinese looks better than english on mobile
+    display: none
+    @media screen and (max-device-width: $mobile)
+        display: inline
+.chinese-char
+    margin: 0
+    padding: 0.1em
+    font-size: 4.5em
 
 #cyber-container
     background: url($left-background) no-repeat
     background-size: cover
-    // top: 0
     height: $cyber-container-height-desktop
     width: $cyber-container-width
     filter: saturate(150%)
@@ -104,6 +115,8 @@ h1
     filter: brightness(2)
 #vinyl
     animation: rotate 8s infinite linear
+    @media screen and (max-device-width: $mobile)
+        display: none
 @keyframes rotate
     0%
         transform: rotate(0deg)

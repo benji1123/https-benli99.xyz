@@ -13,8 +13,13 @@
 <body>
   <!-- MAIN DIV -->
   <div class="center" id="cyber-container">
-    <div class="center-horizontal">
-      <h1> ben </h1> <!-- 李沐祥 -->
+      <h1 id="english-name" class="name"> ben </h1> <!-- 李沐祥 -->
+      <div id="chinese-name" class="name">
+        <!-- 李沐祥 -->
+        <h1 class="chinese-char"> 李 </h1>
+        <h1 class="chinese-char"> 沐 </h1>
+        <!-- <h1 class="chinese-char"> 祥 </h1> -->
+      </div>
       <h2 class="art-credit">Fan of Witcher, hiking, HK cafes</h2>
       <!-- art credit text -->
       <a href="https://www.artstation.com/artwork/JlPaed" target="blank">
@@ -24,14 +29,6 @@
       <div id="icon-bar" class="center-horizontal">
         <!-- icon 1 -->
         <div class="iconrow">
-          <svg id="vinyl" onclick="toggleMusic()" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-            <path
-              d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z" />
-          </svg>
-        </div>
-        <!-- icon 2 -->
-        <div class="iconrow">
           <a href="https://top.gg/bot/774732068282171424" target="blank">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
               <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -40,7 +37,7 @@
             </svg>
           </a>
         </div>
-        <!-- icon 3 -->
+        <!-- icon 2 -->
         <div class="iconrow">
           <a href="https://github.com/benji1123" target="blank">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512">
@@ -50,8 +47,15 @@
             </svg>
           </a>
         </div>
+        <!-- icon 3 -->
+        <div class="iconrow">
+          <svg id="vinyl" onclick="toggleMusic()" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm-96-32a96 96 0 1 0 192 0 96 96 0 1 0 -192 0zM96 240c0-35 17.5-71.1 45.2-98.8S205 96 240 96c8.8 0 16-7.2 16-16s-7.2-16-16-16c-45.4 0-89.2 22.3-121.5 54.5S64 194.6 64 240c0 8.8 7.2 16 16 16s16-7.2 16-16z" />
+          </svg>
+        </div>
       </div>
-    </div>
   </div>
 
   <!-- mute control bottom right -->
@@ -61,5 +65,4 @@
       d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z" />
     </svg>
 </body>
-
 </html>
