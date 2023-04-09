@@ -49,7 +49,7 @@ h1 {
 #cyber-container {
   background: url("media/background/cyber/cyber.jpeg") no-repeat;
   background-size: cover;
-  height: 85%;
+  height: 80%;
   width: 100%;
   -webkit-filter: saturate(150%);
           filter: saturate(150%);
@@ -124,5 +124,14 @@ h1 {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+#mute-button {
+  position: absolute;
+  width: 30px;
+  padding: 1%;
+  bottom: 0;
+  right: 0;
+  opacity: 100%;
 }
 /*# sourceMappingURL=style.css.map */
