@@ -18,17 +18,18 @@ console.log(audioContext.destination)
 const audioCtx = new AudioContext()
 const playSound = audioCtx.createBufferSource();
 let MUSIC_PLAYING = true
+let MUSIC_STARTED = false
 
 const getSongFromAPI = () => {
     // TODO: get this song from API instead of local storage
     const song_1980_dont_stop = '../media/audio/heart-change-brock-hewitt-stories-in-sound-main-version-04-28-13106.mp3'
-    const SOND_ON = true
-    fetch(SOND_ON ? song_1980_dont_stop : '')
+    fetch(song_1980_dont_stop)
         .then(data => data.arrayBuffer())
         .then(buf => {
-            const uint8arr = new Uint8Array(buf)
-            console.log(uint8arr)
-            return audioCtx.decodeAudioData(uint8arr.buffer)
+            // const uint8arr = new Uint8Array(buf)
+            // console.log(uint8arr)
+            // return audioCtx.decodeAudioData(uint8arr.buffer)
+            return audioCtx.decodeAudioData(buf)
         })
         .then(decodedAudio => {
             playSound.buffer = decodedAudio;
@@ -39,6 +40,11 @@ const getSongFromAPI = () => {
 }
 
 const toggleMusic = () => {
+    if (!MUSIC_STARTED) {
+        MUSIC_STARTED = true
+        getSongFromAPI()
+        return
+    }
     if(MUSIC_PLAYING)
         audioCtx.suspend()
     else
