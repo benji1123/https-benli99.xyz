@@ -41,12 +41,6 @@ a {
 }
 
 @media screen and (max-device-width: 480px) {
-  .name {
-    font-family: Times;
-  }
-}
-
-@media screen and (max-device-width: 480px) {
   #english-name {
     display: none;
   }
@@ -69,8 +63,9 @@ a {
 .chinese-char {
   margin: 0;
   padding: 0em;
-  font-family: Times;
-  font-size: 7em;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 6em;
+  text-shadow: teal 0 0 1em;
 }
 
 #cyber-container {
