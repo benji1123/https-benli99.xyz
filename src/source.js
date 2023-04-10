@@ -12,7 +12,6 @@ const loadAnimatedBackground = async () => {
 }
 
 const API_GET_SONG = 'https://pshlsoawx7.execute-api.us-east-1.amazonaws.com/prod'
-console.log(audioContext.destination)
 
 let audioCtx
 let playSound
@@ -26,12 +25,7 @@ const getSongFromAPI = () => {
     const song_1980_dont_stop = '../media/audio/heart-change-brock-hewitt-stories-in-sound-main-version-04-28-13106.mp3'
     fetch(song_1980_dont_stop)
         .then(data => data.arrayBuffer())
-        .then(buf => {
-            // const uint8arr = new Uint8Array(buf)
-            // console.log(uint8arr)
-            // return audioCtx.decodeAudioData(uint8arr.buffer)
-            return audioCtx.decodeAudioData(buf)
-        })
+        .then(buf => audioCtx.decodeAudioData(buf))
         .then(decodedAudio => {
             playSound.buffer = decodedAudio;
             playSound.connect(audioCtx.destination);

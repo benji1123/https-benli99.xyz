@@ -68,6 +68,8 @@ a
 #english-name
     @media screen and (max-device-width: $mobile)
         display: none
+#english-name:hover
+    text-shadow: black 0 0 1em
 #chinese-name
     // chinese looks better than english on mobile
     display: none
@@ -75,8 +77,9 @@ a
         display: inline
 .chinese-char
     margin: 0
-    padding: 0.1em
-    font-size: 4.5em
+    padding: 0em
+    font-family: Times
+    font-size: 9em
 
 #cyber-container
     background: url($left-background) no-repeat
@@ -86,7 +89,7 @@ a
     filter: saturate(150%)
 
     // padding
-    // top-padding: $website-top-padding-desktop
+    top-padding: $website-top-padding-desktop
     @media screen and (max-device-width: $mobile)
         height: $cyber-container-height-mobile
         top-padding: $website-top-padding-mobile
@@ -112,7 +115,7 @@ a
         width: $icon-width-mobile
 .icon:hover
     // TODO: create tooltip on hover (reference Mac OS dock)
-    filter: brightness(2)
+    filter: brightness(0)
 #vinyl
     animation: rotate 8s infinite linear
     @media screen and (max-device-width: $mobile)
@@ -125,8 +128,12 @@ a
 
 #mute-button
     position: absolute
-    width: 30px
-    padding: 1%
+    padding: 1em
     bottom: 0
     right: 0
     opacity: 100%
+
+    width: 3em
+    @media screen and (max-device-width: $mobile)
+        padding: 3em
+        width: 5em

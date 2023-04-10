@@ -46,6 +46,10 @@ a {
   }
 }
 
+#english-name:hover {
+  text-shadow: black 0 0 1em;
+}
+
 #chinese-name {
   display: none;
 }
@@ -58,8 +62,9 @@ a {
 
 .chinese-char {
   margin: 0;
-  padding: 0.1em;
-  font-size: 4.5em;
+  padding: 0em;
+  font-family: Times;
+  font-size: 9em;
 }
 
 #cyber-container {
@@ -69,6 +74,7 @@ a {
   width: 100%;
   -webkit-filter: saturate(150%);
           filter: saturate(150%);
+  top-padding: 50px;
 }
 
 @media screen and (max-device-width: 480px) {
@@ -111,8 +117,8 @@ a {
 }
 
 .icon:hover {
-  -webkit-filter: brightness(2);
-          filter: brightness(2);
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
 }
 
 #vinyl {
@@ -150,10 +156,17 @@ a {
 
 #mute-button {
   position: absolute;
-  width: 30px;
-  padding: 1%;
+  padding: 1em;
   bottom: 0;
   right: 0;
   opacity: 100%;
+  width: 3em;
+}
+
+@media screen and (max-device-width: 480px) {
+  #mute-button {
+    padding: 3em;
+    width: 5em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
