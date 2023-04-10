@@ -65,6 +65,8 @@ a
     font-size: $header-font-size-desktop
     color: $main-text-color
     margin-bottom: 0
+    @media screen and (max-device-width: $mobile)
+        font-family: Times
 #english-name
     @media screen and (max-device-width: $mobile)
         display: none
@@ -79,7 +81,7 @@ a
     margin: 0
     padding: 0em
     font-family: Times
-    font-size: 9em
+    font-size: 7em
 
 #cyber-container
     background: url($left-background) no-repeat
@@ -136,4 +138,4 @@ a
     width: 3em
     @media screen and (max-device-width: $mobile)
         padding: 3em
-        width: 5em
+        width: 4em

@@ -41,6 +41,12 @@ a {
 }
 
 @media screen and (max-device-width: 480px) {
+  .name {
+    font-family: Times;
+  }
+}
+
+@media screen and (max-device-width: 480px) {
   #english-name {
     display: none;
   }
@@ -64,7 +70,7 @@ a {
   margin: 0;
   padding: 0em;
   font-family: Times;
-  font-size: 9em;
+  font-size: 7em;
 }
 
 #cyber-container {
@@ -166,7 +172,7 @@ a {
 @media screen and (max-device-width: 480px) {
   #mute-button {
     padding: 3em;
-    width: 5em;
+    width: 4em;
   }
 }
 /*# sourceMappingURL=style.css.map */
