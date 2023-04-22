@@ -207,17 +207,16 @@ body {
 }
 
 .container {
-  display: none;
   height: 3em;
   margin: 0;
   left: 0;
-  -webkit-backdrop-filter: brightness(0%);
-          backdrop-filter: brightness(0%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
   color: #f2a083;
+  -webkit-backdrop-filter: brightness(0%);
+          backdrop-filter: brightness(0%);
 }
 
 .top {
@@ -299,6 +298,14 @@ body {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
+}
+
+#iso-cards {
+  opacity: 60%;
+}
+
+#iso-cards:hover {
+  opacity: 80%;
 }
 
 body {
