@@ -64,7 +64,7 @@ body {
 }
 
 .name {
-  font-size: 3em;
+  font-size: 4em;
   text-align: center;
   color: #f2a083;
   text-shadow: #f2a083 0 0 5px;
@@ -300,6 +300,10 @@ body {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
+}
+
+#iso-cards {
+  opacity: 50%;
 }
 
 body {
