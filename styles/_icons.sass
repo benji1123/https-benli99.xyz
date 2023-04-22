@@ -1,0 +1,31 @@
+$mobile: 480px
+$icon-width-desktop: 40px
+$icon-width-mobile: 130px
+$inter-icon-spacing-desktop: 20px
+$inter-icon-spacing-mobile: 90px
+$icon-color: #f2a083 // salmon
+
+.iconrow
+    padding-top: $inter-icon-spacing-desktop
+    @media screen and (max-device-width: $mobile)
+        padding-top: $inter-icon-spacing-mobile
+.icon
+    display: none
+    fill: $icon-color
+    width: $icon-width-desktop
+    opacity: 60%
+    @media screen and (max-device-width: $mobile)
+        fill: $icon-color
+        width: $icon-width-mobile
+.icon:hover
+    // TODO: tooltip on hover (reference Mac OS dock)
+    filter: brightness(0)
+#vinyl
+    animation: rotate 8s infinite linear
+    @media screen and (max-device-width: $mobile)
+        display: none
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)

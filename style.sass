@@ -1,39 +1,35 @@
-// Online eyedrop tool: https://imagecolorpicker.com/en
+@import styles/text
+@import styles/_icons
+@import styles/_cursor
+@import styles/_background
 
 // CONTAINER DIMENSIONS
 $mobile: 480px
-$left-background: "media/background/cyber/cyber.jpeg" // placeholder for 40 MB GIF background
-
-$website-top-padding-desktop: 50px
-$website-top-padding-mobile: 200px
-
-// BORDER CONTROL
-// goal: render cinematic black bars (top & bottom only)
 $body-background-color: black
-$cyber-container-width: 100%
-$cyber-container-height-desktop: 80% // border = 100% - 85%
-$cyber-container-height-mobile: 100% // border would be weird on mobile
 
-//ICONS
-$icon-width-desktop: 50px
-$icon-width-mobile: 130px
-$inter-icon-spacing-desktop: 30px
-$inter-icon-spacing-mobile: 90px
+body
+    background: $body-background-color
+    font-family: Futura
+.card
+    position: absolute
+    height: 100%
+    width: 100%
+a
+    text-decoration: none
 
-// COLOR
-$icon-color-desktop: #f2a083 // salmon
-$icon-color-mobile: #f2a083
+/* ====== UI ====== */
+#mute-button
+    position: fixed
+    padding: 1em
+    bottom: 0
+    right: 0
+    opacity: 100%
+    width: 3em
+    @media screen and (max-device-width: $mobile)
+        padding: 3em
+        width: 4em
 
-// TEXT
-$main-text-color: #f2a083
-$darkened-main-text-color: #f5835b
-$header-font-size-desktop: 4em
-$header-font-size-mobile: 6em
-    
-$art-credit-font-size-desktop: 0.7em
-$art-credit-font-size-mobile: 5em
-
-// GENERAL
+/* ====== CENTERING ====== */
 .center-vertical
     margin: 0
     position: absolute
@@ -47,94 +43,9 @@ $art-credit-font-size-mobile: 5em
     -ms-transform: translateX(-50%)
     transform: translateX(-50%)
 .center
-  margin: 0
-  position: absolute
-  top: 50%
-  left: 50%
-  -ms-transform: translate(-50%, -50%)
-  transform: translate(-50%, -50%)
-body
-    font-family: Futura
-    background: $body-background-color
-a
-    text-decoration: none
-.name
-    font-family: Futura
-    text-align: center
-    // text-shadow: white 0 0 7px
-    font-size: $header-font-size-desktop
-    color: $main-text-color
-    margin-bottom: 0
-#english-name
-    @media screen and (max-device-width: $mobile)
-        display: none
-#english-name:hover
-    text-shadow: black 0 0 1em
-#chinese-name
-    // chinese looks better than english on mobile
-    display: none
-    @media screen and (max-device-width: $mobile)
-        display: inline
-.chinese-char
     margin: 0
-    padding: 0em
-    font-family: 'Noto Serif SC', serif
-    font-size: 6em
-    text-shadow: teal 0 0 1em
-
-#cyber-container
-    background: url($left-background) no-repeat
-    background-size: cover
-    height: $cyber-container-height-desktop
-    width: $cyber-container-width
-    filter: saturate(150%)
-
-    // padding
-    top-padding: $website-top-padding-desktop
-    @media screen and (max-device-width: $mobile)
-        height: $cyber-container-height-mobile
-        top-padding: $website-top-padding-mobile
-        background-position: left
-
-/* ====== OTHER ====== */
-.art-credit
-    font-size: $art-credit-font-size-desktop
-    color: $main-text-color
-    text-align: center
-
-/* ====== ICONS ====== */
-.iconrow
-    padding-top: $inter-icon-spacing-desktop
-    @media screen and (max-device-width: $mobile)
-        padding-top: $inter-icon-spacing-mobile
-.icon
-    opacity: 60%
-    fill: $icon-color-desktop
-    width: $icon-width-desktop
-    @media screen and (max-device-width: $mobile)
-        fill: $icon-color-mobile
-        width: $icon-width-mobile
-.icon:hover
-    // TODO: create tooltip on hover (reference Mac OS dock)
-    filter: brightness(0)
-#vinyl
-    animation: rotate 8s infinite linear
-    @media screen and (max-device-width: $mobile)
-        display: none
-@keyframes rotate
-    0%
-        transform: rotate(0deg)
-    100%
-        transform: rotate(360deg)
-
-#mute-button
     position: absolute
-    padding: 1em
-    bottom: 0
-    right: 0
-    opacity: 100%
-
-    width: 3em
-    @media screen and (max-device-width: $mobile)
-        padding: 3em
-        width: 4em
+    top: 50%
+    left: 50%
+    -ms-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)

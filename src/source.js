@@ -1,12 +1,13 @@
 const ANIMATED_BACKGROUND = 'https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber.gif';
 
-const loadAnimatedBackground = async () => {
+/** lazy load background-image */
+const lazyLoadAnimatedBackgroundFile = async () => {
     const img = await fetch(ANIMATED_BACKGROUND).then(resp => {
         return resp;
     })
     console.log(`fetched image: ${ANIMATED_BACKGROUND}`);
     const bgrndURL = img.url;
-    const cyber = document.getElementById('cyber-container');
+    const cyber = document.getElementById('img-bgrnd');
     cyber.style.backgroundImage = `url(${bgrndURL})`;
     URL.revokeObjectURL(bgrndURL);
 }
