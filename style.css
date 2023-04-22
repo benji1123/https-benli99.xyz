@@ -1,9 +1,33 @@
+.fade-in {
+  opacity: 0%;
+  -webkit-animation: fade-in 7s 2s forwards;
+          animation: fade-in 7s 2s forwards;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 body {
   font-family: 'Orbitron', sans-serif;
 }
 
 .name {
-  font-size: 3em;
+  font-size: 5em;
   text-align: center;
   color: #f2a083;
   text-shadow: #f2a083 0 0 5px;
@@ -54,11 +78,6 @@ body {
 }
 
 .flicker {
-  -webkit-animation: flicker 3s infinite alternate;
-          animation: flicker 3s infinite alternate;
-}
-
-.flicker-on-hover:hover {
   -webkit-animation: flicker 3s infinite alternate;
           animation: flicker 3s infinite alternate;
 }
@@ -150,43 +169,39 @@ body {
   width: 100%;
   background: url("media/background/cyber/cyber.jpeg") no-repeat;
   background-size: cover;
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
+  -webkit-filter: saturate(0%) blur(7px);
+          filter: saturate(0%) blur(7px);
   -webkit-animation-name: saturation-fluctuation;
           animation-name: saturation-fluctuation;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes saturation-fluctuation {
   0% {
-    -webkit-filter: blur(7px);
-            filter: blur(7px);
-  }
-  2% {
     -webkit-filter: saturate(0%) blur(7px);
             filter: saturate(0%) blur(7px);
   }
-  10% {
-    -webkit-filter: blur(7px);
-            filter: blur(7px);
+  100% {
+    -webkit-filter: saturate(100%) blur(7px);
+            filter: saturate(100%) blur(7px);
   }
 }
 
 @keyframes saturation-fluctuation {
   0% {
-    -webkit-filter: blur(7px);
-            filter: blur(7px);
-  }
-  2% {
     -webkit-filter: saturate(0%) blur(7px);
             filter: saturate(0%) blur(7px);
   }
-  10% {
-    -webkit-filter: blur(7px);
-            filter: blur(7px);
+  100% {
+    -webkit-filter: saturate(100%) blur(7px);
+            filter: saturate(100%) blur(7px);
   }
 }
 
@@ -195,7 +210,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  top: 0;
+  top: 50%;
   color: #f2a083;
 }
 
@@ -228,8 +243,8 @@ body {
 }
 
 .RightToLeft {
-  -webkit-animation: RightToLeft 30s infinite linear;
-          animation: RightToLeft 30s infinite linear;
+  -webkit-animation: RightToLeft 30s infinite linear 10s;
+          animation: RightToLeft 30s infinite linear 10s;
 }
 
 @-webkit-keyframes RightToLeft {
@@ -255,8 +270,8 @@ body {
 }
 
 .LeftToRight {
-  -webkit-animation: LeftToRight 30s infinite linear;
-          animation: LeftToRight 30s infinite linear;
+  -webkit-animation: LeftToRight 30s infinite linear 10s;
+          animation: LeftToRight 30s infinite linear 10s;
 }
 
 @-webkit-keyframes LeftToRight {

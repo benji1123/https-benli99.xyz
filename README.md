@@ -5,6 +5,7 @@ Art:
 
 Design references:
 * fernando pino: https://fernandopinocreative.com/
+* Cyberpunk 2077 UI: https://www.behance.net/gallery/133185623/Cyberpunk-2077User-Interface-(Part-2)
 
 Tools:
 * [SASS](https://sass-lang.com/) (prettier CSS)

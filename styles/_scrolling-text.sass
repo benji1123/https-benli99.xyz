@@ -5,7 +5,7 @@
 .container
   display: flex
   position: fixed
-  top: 0
+  top: 50%
   color: $text-color
 
 .container2
@@ -28,8 +28,10 @@
   margin-bottom: 0
   line-height: 10px
 
+$delay: 10s
+
 .RightToLeft
-  animation: RightToLeft 30s infinite linear
+  animation: RightToLeft 30s infinite linear $delay
 
 @keyframes  RightToLeft
   from
@@ -38,7 +40,7 @@
     transform: translateX(-50%)
 
 .LeftToRight
-  animation: LeftToRight 30s infinite linear
+  animation: LeftToRight 30s infinite linear $delay
 
 @keyframes  LeftToRight
   from
