@@ -1,9 +1,10 @@
 @import ./_constants
     
-$header-font-size-desktop: 2.5em
+$header-font-size-desktop: 3em
 $header-font-size-mobile: 4em
-$art-credit-font-size-desktop: 0.7em
-$art-credit-font-size-mobile: 5em
+$art-credit-font-size: 1em
+$art-credit-font-size-mobile: 2em
+
 body
     font-family: Futura
 .name
@@ -13,12 +14,15 @@ body
     text-shadow: $text-color 0 0 5px
 .art-credit
     position: fixed
-    font-size: $art-credit-font-size-desktop
     text-align: center
     color: black
+    opacity: 50%
     bottom: 0
     right: 0
     padding-right: 2em
+    font-size: $art-credit-font-size
+    @media screen and (max-device-width: $mobile)
+        font-size: $art-credit-font-size-mobile
 .chinese-char
     margin: 0
     font-family: 'Noto Serif SC', serif
