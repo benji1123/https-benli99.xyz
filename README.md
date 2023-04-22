@@ -1,3 +1,6 @@
+## Progress Journal
+* https://benji112358.medium.com/ongoing-7fecc00e9aa9
+
 ## Attribution
 Art:
 * [[ArtStation](https://www.artstation.com/artwork/JlPaed)] *Cyberpunk* by JlPaed
