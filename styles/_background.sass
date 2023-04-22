@@ -6,8 +6,8 @@ $initial-filter-bgrnd: saturate(100%) blur($blur-bgrnd)
     z-index: -1
     height: 100%
     width: 100%
-    background-size: cover
     background: url($left-background) no-repeat
+    background-size: cover
     filter: $initial-filter-bgrnd
 
     // transition background from color to bnw
@@ -16,10 +16,6 @@ $initial-filter-bgrnd: saturate(100%) blur($blur-bgrnd)
     animation-delay: 5s
     animation-iteration-count: 1
     animation-fill-mode: forwards
-
-    @media screen and (max-device-width: $mobile)
-        background-size: cover
-        background-position: left
 
 @keyframes saturation-fluctuation
     0%

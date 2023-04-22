@@ -104,8 +104,8 @@ body {
   z-index: -1;
   height: 100%;
   width: 100%;
-  background-size: cover;
   background: url("media/background/cyber/cyber.jpeg") no-repeat;
+  background-size: cover;
   -webkit-filter: saturate(100%) blur(7px);
           filter: saturate(100%) blur(7px);
   -webkit-animation-name: saturation-fluctuation;
@@ -118,13 +118,6 @@ body {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-@media screen and (max-device-width: 480px) {
-  #img-bgrnd {
-    background-size: cover;
-    background-position: left;
-  }
 }
 
 @-webkit-keyframes saturation-fluctuation {
