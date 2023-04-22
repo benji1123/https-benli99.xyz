@@ -1,0 +1,47 @@
+// https://www.winterwind.com/tutorials/css/37
+    
+@import ./_constants
+
+.container
+  display: flex
+  position: fixed
+  top: 0
+  color: $text-color
+
+.container2
+  display: flex
+  position: fixed
+  bottom: 2%
+  color: $text-color
+
+.scroll
+  white-space: nowrap
+  margin: 0 2em
+
+.scroll div
+  display: flex
+  gap: 2em
+
+.scroll p
+  font-size: 1em
+  font-weight: bold
+  margin-bottom: 0
+  line-height: 10px
+
+.RightToLeft
+  animation: RightToLeft 30s infinite linear
+
+@keyframes  RightToLeft
+  from
+    transform: translateX(0%)
+  to
+    transform: translateX(-50%)
+
+.LeftToRight
+  animation: LeftToRight 30s infinite linear
+
+@keyframes  LeftToRight
+  from
+    transform: translateX(-50%)
+  to
+    transform: translateX(0%)

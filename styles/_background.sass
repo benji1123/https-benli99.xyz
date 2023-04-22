@@ -1,6 +1,7 @@
 $left-background: "media/background/cyber/cyber.jpeg" // placeholder for 40 MB GIF background
-$blur-bgrnd: 7px
-$initial-filter-bgrnd: saturate(100%) blur($blur-bgrnd)
+$bnw-filter: saturate(0%) blur(7px)
+$color-filter: blur(7px)
+
 #img-bgrnd
     position: absolute
     z-index: -1
@@ -8,17 +9,17 @@ $initial-filter-bgrnd: saturate(100%) blur($blur-bgrnd)
     width: 100%
     background: url($left-background) no-repeat
     background-size: cover
-    filter: $initial-filter-bgrnd
+    filter: $color-filter
 
     // transition background from color to bnw
     animation-name: saturation-fluctuation
-    animation-duration: 10s
-    animation-delay: 5s
-    animation-iteration-count: 1
-    animation-fill-mode: forwards
+    animation-duration: 5s
+    animation-iteration-count: infinite
 
 @keyframes saturation-fluctuation
     0%
-        filter: $initial-filter-bgrnd
-    100%
-        filter: saturate(0%) blur($blur-bgrnd) brightness(80%)
+        filter: $color-filter
+    2%
+        filter: $bnw-filter
+    10%
+        filter: $color-filter

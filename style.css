@@ -1,5 +1,5 @@
 body {
-  font-family: Futura;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .name {
@@ -12,7 +12,7 @@ body {
 .art-credit {
   position: fixed;
   text-align: center;
-  color: black;
+  color: green;
   opacity: 50%;
   bottom: 0;
   right: 0;
@@ -53,14 +53,12 @@ body {
   text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px #f2a083, 0 0 41px #f2a083, 0 0 46px #f2a083, 0 0 21px #f2a083, 0 0 75px #f2a083;
 }
 
-@media screen and (max-device-width: 480px) {
-  .neon-text {
-    -webkit-animation: flicker 3s infinite alternate;
-            animation: flicker 3s infinite alternate;
-  }
+.flicker {
+  -webkit-animation: flicker 3s infinite alternate;
+          animation: flicker 3s infinite alternate;
 }
 
-.neon-text:hover {
+.flicker-on-hover:hover {
   -webkit-animation: flicker 3s infinite alternate;
           animation: flicker 3s infinite alternate;
 }
@@ -152,45 +150,139 @@ body {
   width: 100%;
   background: url("media/background/cyber/cyber.jpeg") no-repeat;
   background-size: cover;
-  -webkit-filter: saturate(100%) blur(7px);
-          filter: saturate(100%) blur(7px);
+  -webkit-filter: blur(7px);
+          filter: blur(7px);
   -webkit-animation-name: saturation-fluctuation;
           animation-name: saturation-fluctuation;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes saturation-fluctuation {
   0% {
-    -webkit-filter: saturate(100%) blur(7px);
-            filter: saturate(100%) blur(7px);
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
   }
-  100% {
-    -webkit-filter: saturate(0%) blur(7px) brightness(80%);
-            filter: saturate(0%) blur(7px) brightness(80%);
+  2% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  10% {
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
   }
 }
 
 @keyframes saturation-fluctuation {
   0% {
-    -webkit-filter: saturate(100%) blur(7px);
-            filter: saturate(100%) blur(7px);
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
   }
-  100% {
-    -webkit-filter: saturate(0%) blur(7px) brightness(80%);
-            filter: saturate(0%) blur(7px) brightness(80%);
+  2% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  10% {
+    -webkit-filter: blur(7px);
+            filter: blur(7px);
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  color: #f2a083;
+}
+
+.container2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  bottom: 2%;
+  color: #f2a083;
+}
+
+.scroll {
+  white-space: nowrap;
+  margin: 0 2em;
+}
+
+.scroll div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+}
+
+.scroll p {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 10px;
+}
+
+.RightToLeft {
+  -webkit-animation: RightToLeft 30s infinite linear;
+          animation: RightToLeft 30s infinite linear;
+}
+
+@-webkit-keyframes RightToLeft {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes RightToLeft {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.LeftToRight {
+  -webkit-animation: LeftToRight 30s infinite linear;
+          animation: LeftToRight 30s infinite linear;
+}
+
+@-webkit-keyframes LeftToRight {
+  from {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes LeftToRight {
+  from {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
 body {
   background: black;
-  font-family: Futura;
 }
 
 .card {
