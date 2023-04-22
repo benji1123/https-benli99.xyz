@@ -15,6 +15,9 @@ VFX:
 * [[YouTube](https://www.youtube.com/watch?v=Swyers966G0&ab_channel=MotionArrayTutorials)] *How To Create A Dynamic Text Bubble Effect In After Effects* by Motion Array Tutorials
 * [[YouTube](https://www.youtube.com/watch?v=8rMI1iCbkO8&ab_channel=SmertimbaGraphics)] *How to Make a GIF in After Effects | How to Export a GIF from After Effects* by Smertimba Graphics
 
+Photoshop:
+* [[YouTube](https://www.youtube.com/watch?v=1MP4ppZI9dE&ab_channel=Dansky) *Make Anything ISOMETRIC with Actions in Photoshop* by Dansky]
+
 Songs:
 * https://uppbeat.io/t/mood-maze/cybertruck
 * https://uppbeat.io/t/tatami/dont-stop
