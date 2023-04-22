@@ -51,6 +51,16 @@ body {
 .neon-text {
   color: #fff;
   text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px #f2a083, 0 0 41px #f2a083, 0 0 46px #f2a083, 0 0 21px #f2a083, 0 0 75px #f2a083;
+}
+
+@media screen and (max-device-width: 480px) {
+  .neon-text {
+    -webkit-animation: flicker 3s infinite alternate;
+            animation: flicker 3s infinite alternate;
+  }
+}
+
+.neon-text:hover {
   -webkit-animation: flicker 3s infinite alternate;
           animation: flicker 3s infinite alternate;
 }

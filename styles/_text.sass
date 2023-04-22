@@ -41,6 +41,9 @@ body
 .neon-text
   color: #fff
   text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px $text-color, 0 0 41px $text-color, 0 0 46px $text-color, 0 0 21px $text-color, 0 0 75px $text-color
+  @media screen and (max-device-width: $mobile)
+      animation: flicker 3s infinite alternate //$initial-animation-time
+.neon-text:hover
   animation: flicker 3s infinite alternate //$initial-animation-time
 @keyframes flicker
   0%, 18%, 22%, 25%, 53%, 57%, 100%
