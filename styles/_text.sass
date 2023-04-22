@@ -1,21 +1,24 @@
-$mobile: 480px
-$main-text-color: #f2a083
-$header-font-size-desktop: 2em
+@import ./_constants
+    
+$header-font-size-desktop: 2.5em
 $header-font-size-mobile: 4em
 $art-credit-font-size-desktop: 0.7em
 $art-credit-font-size-mobile: 5em
-
 body
     font-family: Futura
 .name
     font-size: $header-font-size-desktop
     text-align: center
-    color: $main-text-color
-    text-shadow: $main-text-color 0 0 5px
+    color: $text-color
+    text-shadow: $text-color 0 0 5px
 .art-credit
+    position: fixed
     font-size: $art-credit-font-size-desktop
     text-align: center
-    color: $main-text-color
+    color: black
+    bottom: 0
+    right: 0
+    padding-right: 2em
 .chinese-char
     margin: 0
     font-family: 'Noto Serif SC', serif
@@ -29,3 +32,14 @@ body
     display: none
     @media screen and (max-device-width: $mobile)
         display: inline
+
+// neon text
+.neon-text
+  color: #fff
+  text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px $text-color, 0 0 41px $text-color, 0 0 46px $text-color, 0 0 21px $text-color, 0 0 75px $text-color
+  animation: flicker 3s infinite alternate //$initial-animation-time
+@keyframes flicker
+  0%, 18%, 22%, 25%, 53%, 57%, 100%
+    text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 20px $text-color, 0 0 40px $text-color, 0 0 45px $text-color, 0 0 50px $text-color, 0 0 75px $text-color
+  20%, 24%, 55%   
+    text-shadow: none

@@ -1,4 +1,4 @@
-const ANIMATED_BACKGROUND = 'https://media.githubusercontent.com/media/benji1123/https-benli99.xyz/master/media/background/cyber/cyber.gif';
+const ANIMATED_BACKGROUND = 'https://media.githubusercontent.com/media/benji1123/www.benli99.xyz/master/media/background/cyber/cyber.gif';
 
 /** lazy load background-image */
 const lazyLoadAnimatedBackgroundFile = async () => {

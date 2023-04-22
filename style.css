@@ -3,16 +3,20 @@ body {
 }
 
 .name {
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
   color: #f2a083;
   text-shadow: #f2a083 0 0 5px;
 }
 
 .art-credit {
+  position: fixed;
   font-size: 0.7em;
   text-align: center;
-  color: #f2a083;
+  color: black;
+  bottom: 0;
+  right: 0;
+  padding-right: 2em;
 }
 
 .chinese-char {
@@ -34,6 +38,31 @@ body {
 @media screen and (max-device-width: 480px) {
   #chinese-name {
     display: inline;
+  }
+}
+
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px #f2a083, 0 0 41px #f2a083, 0 0 46px #f2a083, 0 0 21px #f2a083, 0 0 75px #f2a083;
+  -webkit-animation: flicker 3s infinite alternate;
+          animation: flicker 3s infinite alternate;
+}
+
+@-webkit-keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 20px #f2a083, 0 0 40px #f2a083, 0 0 45px #f2a083, 0 0 50px #f2a083, 0 0 75px #f2a083;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 20px #f2a083, 0 0 40px #f2a083, 0 0 45px #f2a083, 0 0 50px #f2a083, 0 0 75px #f2a083;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
   }
 }
 
