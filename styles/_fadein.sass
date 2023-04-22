@@ -1,3 +1,5 @@
+$bnw-filter: saturate(0%) blur(7px)
+$color-filter: saturate(100%) blur(7px)
 
 
 .fade-in
@@ -11,3 +13,18 @@
         opacity: 0%
     100%
         opacity: 100%
+
+#img-bgrnd
+    filter: $bnw-filter
+    // transition background from color to bnw
+    animation-name: saturation-fadein
+    animation-delay: 5s
+    animation-duration: 10s
+    animation-iteration-count: 1
+    animation-fill-mode: forwards
+
+@keyframes saturation-fadein
+    0%
+        filter: $bnw-filter
+    100%
+        filter: $color-filter

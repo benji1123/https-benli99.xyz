@@ -9,17 +9,18 @@ $color-filter: saturate(100%) blur(7px)
     width: 100%
     background: url($left-background) no-repeat
     background-size: cover
-    filter: $bnw-filter
 
     // transition background from color to bnw
-    animation-name: saturation-fluctuation
-    animation-delay: 5s
-    animation-duration: 7s
-    animation-iteration-count: 1
-    animation-fill-mode: forwards
+    // filter: $color-filter
+    // animation-name: saturation-fluctuation
+    // animation-duration: 5s
+    // animation-iteration-count: infinite
+    // animation-direction: forwards
 
-@keyframes saturation-fluctuation
-    0%
-        filter: $bnw-filter
-    100%
-        filter: $color-filter
+// @keyframes saturation-fluctuation
+//     0%
+//         filter: $color-filter
+//     2%
+//         filter: $bnw-filter
+//     10%
+//         filter: $color-filter

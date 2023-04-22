@@ -22,12 +22,49 @@
   }
 }
 
+#img-bgrnd {
+  -webkit-filter: saturate(0%) blur(7px);
+          filter: saturate(0%) blur(7px);
+  -webkit-animation-name: saturation-fadein;
+          animation-name: saturation-fadein;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes saturation-fadein {
+  0% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  100% {
+    -webkit-filter: saturate(100%) blur(7px);
+            filter: saturate(100%) blur(7px);
+  }
+}
+
+@keyframes saturation-fadein {
+  0% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  100% {
+    -webkit-filter: saturate(100%) blur(7px);
+            filter: saturate(100%) blur(7px);
+  }
+}
+
 body {
   font-family: 'Orbitron', sans-serif;
 }
 
 .name {
-  font-size: 5em;
+  font-size: 3em;
   text-align: center;
   color: #f2a083;
   text-shadow: #f2a083 0 0 5px;
@@ -169,40 +206,6 @@ body {
   width: 100%;
   background: url("media/background/cyber/cyber.jpeg") no-repeat;
   background-size: cover;
-  -webkit-filter: saturate(0%) blur(7px);
-          filter: saturate(0%) blur(7px);
-  -webkit-animation-name: saturation-fluctuation;
-          animation-name: saturation-fluctuation;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes saturation-fluctuation {
-  0% {
-    -webkit-filter: saturate(0%) blur(7px);
-            filter: saturate(0%) blur(7px);
-  }
-  100% {
-    -webkit-filter: saturate(100%) blur(7px);
-            filter: saturate(100%) blur(7px);
-  }
-}
-
-@keyframes saturation-fluctuation {
-  0% {
-    -webkit-filter: saturate(0%) blur(7px);
-            filter: saturate(0%) blur(7px);
-  }
-  100% {
-    -webkit-filter: saturate(100%) blur(7px);
-            filter: saturate(100%) blur(7px);
-  }
 }
 
 .container {
@@ -210,7 +213,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  top: 50%;
+  top: 0;
   color: #f2a083;
 }
 
@@ -243,8 +246,8 @@ body {
 }
 
 .RightToLeft {
-  -webkit-animation: RightToLeft 30s infinite linear 10s;
-          animation: RightToLeft 30s infinite linear 10s;
+  -webkit-animation: RightToLeft 30s infinite linear;
+          animation: RightToLeft 30s infinite linear;
 }
 
 @-webkit-keyframes RightToLeft {
@@ -270,8 +273,8 @@ body {
 }
 
 .LeftToRight {
-  -webkit-animation: LeftToRight 30s infinite linear 10s;
-          animation: LeftToRight 30s infinite linear 10s;
+  -webkit-animation: LeftToRight 30s infinite linear;
+          animation: LeftToRight 30s infinite linear;
 }
 
 @-webkit-keyframes LeftToRight {
