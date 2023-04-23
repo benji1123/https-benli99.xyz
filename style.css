@@ -85,12 +85,6 @@ body {
   }
 }
 
-.chinese-char {
-  margin: 0;
-  font-family: 'Noto Serif SC', serif;
-  font-size: 3em;
-}
-
 @media screen and (max-device-width: 480px) {
   .desktop-name {
     display: none;
@@ -99,6 +93,12 @@ body {
 
 .mobile-name {
   display: none;
+  font-size: 20px !important;
+}
+
+.mobile-name .chinese-char {
+  margin: 0;
+  font-family: 'Noto Serif SC', serif;
 }
 
 @media screen and (max-device-width: 480px) {
@@ -110,6 +110,11 @@ body {
 .neon-text {
   color: #fff;
   text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px #f2a083, 0 0 41px #f2a083, 0 0 46px #f2a083, 0 0 21px #f2a083, 0 0 75px #f2a083;
+}
+
+.neon-text-smaller {
+  color: #fff;
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #f2a083, 0 0 20px #f2a083, 0 0 23px #f2a083, 0 0 10px #f2a083, 0 0 38px #f2a083;
 }
 
 .flicker {
@@ -219,6 +224,13 @@ body {
           backdrop-filter: brightness(0%);
 }
 
+@media screen and (max-device-width: 480px) {
+  .container {
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+}
+
 .top {
   top: 0;
 }
@@ -301,11 +313,11 @@ body {
 }
 
 #iso-cards {
-  opacity: 50%;
+  opacity: 60%;
 }
 
 #iso-cards:hover {
-  opacity: 65%;
+  opacity: 80%;
 }
 
 body {

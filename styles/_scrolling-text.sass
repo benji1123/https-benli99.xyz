@@ -1,4 +1,4 @@
-// https://www.winterwind.com/tutorials/css/37
+// YT tutorial scrolling text: https://www.winterwind.com/tutorials/css/37
     
 @import ./_constants
 
@@ -9,8 +9,10 @@
   display: flex
   position: fixed
   color: $text-color
-  // cinematic bars
+  // cinematic black bar hack
   backdrop-filter: brightness(0%)
+  @media screen and (max-device-width: $mobile)
+    backdrop-filter: none
 
 .top
   top: 0

@@ -1,7 +1,7 @@
 @import ./_constants
     
 $header-font-size-desktop: 4em
-$header-font-size-mobile: 1.5em
+$header-font-size-mobile: 20px
 $art-credit-font-size: 1em
 $art-credit-font-size-mobile: 2em
 
@@ -12,8 +12,6 @@ body
     text-align: center
     color: $text-color
     text-shadow: $text-color 0 0 5px
-    @media-screen and (max-device-width: $mobile)
-        font-size: $header-font-size-mobile
 .art-credit
     position: fixed
     text-align: center
@@ -25,16 +23,16 @@ body
     font-size: $art-credit-font-size
     @media screen and (max-device-width: $mobile)
         font-size: $art-credit-font-size-mobile
-.chinese-char
-    margin: 0
-    font-family: 'Noto Serif SC', serif
-    font-size: $header-font-size-mobile
 // === show chinese name on mobile ===
 .desktop-name
     @media screen and (max-device-width: $mobile)
         display: none
 .mobile-name
     display: none
+    font-size: $header-font-size-mobile !important
+    .chinese-char
+        margin: 0
+        font-family: 'Noto Serif SC', serif
     @media screen and (max-device-width: $mobile)
         display: inline
 // neon text
@@ -42,6 +40,10 @@ body
   $neon-text-color: $salmon
   color: #fff
   text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px $neon-text-color, 0 0 41px $neon-text-color, 0 0 46px $neon-text-color, 0 0 21px $neon-text-color, 0 0 75px $neon-text-color
+.neon-text-smaller
+  $neon-text-color: $salmon
+  color: #fff
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 5px #fff, 0 0 10px $neon-text-color, 0 0 20px $neon-text-color, 0 0 23px $neon-text-color, 0 0 10px $neon-text-color, 0 0 38px $neon-text-color
 .flicker
     animation: flicker 3s infinite alternate //$initial-animation-time
 @keyframes flicker
