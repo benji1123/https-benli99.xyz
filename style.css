@@ -41,8 +41,8 @@
             filter: saturate(0%) blur(7px);
   }
   100% {
-    -webkit-filter: saturate(50%) blur(7px);
-            filter: saturate(50%) blur(7px);
+    -webkit-filter: saturate(100%) blur(7px);
+            filter: saturate(100%) blur(7px);
   }
 }
 
@@ -52,8 +52,8 @@
             filter: saturate(0%) blur(7px);
   }
   100% {
-    -webkit-filter: saturate(50%) blur(7px);
-            filter: saturate(50%) blur(7px);
+    -webkit-filter: saturate(100%) blur(7px);
+            filter: saturate(100%) blur(7px);
   }
 }
 
@@ -92,17 +92,17 @@ body {
 }
 
 @media screen and (max-device-width: 480px) {
-  #english-name {
+  .desktop-name {
     display: none;
   }
 }
 
-#chinese-name {
+.mobile-name {
   display: none;
 }
 
 @media screen and (max-device-width: 480px) {
-  #chinese-name {
+  .mobile-name {
     display: inline;
   }
 }
@@ -301,11 +301,11 @@ body {
 }
 
 #iso-cards {
-  opacity: 60%;
+  opacity: 50%;
 }
 
 #iso-cards:hover {
-  opacity: 80%;
+  opacity: 65%;
 }
 
 body {

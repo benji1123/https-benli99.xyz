@@ -27,20 +27,19 @@ body
     margin: 0
     font-family: 'Noto Serif SC', serif
     font-size: $header-font-size-mobile
-
 // === show chinese name on mobile ===
-#english-name
+.desktop-name
     @media screen and (max-device-width: $mobile)
         display: none
-#chinese-name
+.mobile-name
     display: none
     @media screen and (max-device-width: $mobile)
         display: inline
-
 // neon text
 .neon-text
+  $neon-text-color: $salmon
   color: #fff
-  text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px $text-color, 0 0 41px $text-color, 0 0 46px $text-color, 0 0 21px $text-color, 0 0 75px $text-color
+  text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px $neon-text-color, 0 0 41px $neon-text-color, 0 0 46px $neon-text-color, 0 0 21px $neon-text-color, 0 0 75px $neon-text-color
 .flicker
     animation: flicker 3s infinite alternate //$initial-animation-time
 @keyframes flicker
