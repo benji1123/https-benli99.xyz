@@ -69,19 +69,15 @@ body {
 }
 
 .art-credit {
-  position: fixed;
   text-align: center;
-  color: green;
+  color: black;
   opacity: 50%;
-  bottom: 0;
-  right: 0;
-  padding-right: 2em;
   font-size: 1em;
 }
 
 @media screen and (max-device-width: 480px) {
   .art-credit {
-    font-size: 2em;
+    font-size: 1em;
   }
 }
 
@@ -219,7 +215,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  color: #f2a083;
   -webkit-backdrop-filter: brightness(0%);
           backdrop-filter: brightness(0%);
 }
@@ -314,10 +309,13 @@ body {
 
 #iso-cards {
   opacity: 60%;
+  -webkit-filter: saturate(0%);
+          filter: saturate(0%);
 }
 
 #iso-cards:hover {
-  opacity: 80%;
+  -webkit-filter: none;
+          filter: none;
 }
 
 body {
