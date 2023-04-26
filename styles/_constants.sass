@@ -7,3 +7,22 @@ $mint-jungle: #1ded83
 $salmon: #f2a083
 $violet-purple: #9D2BF5
 $text-color: $salmon
+
+$bnw-filter: saturate(0%) blur(7px)
+$color-filter: saturate(120%) blur(7px)
+
+.saturation-fluct
+    filter: $bnw-filter
+    // transition background from color to bnw
+    animation-name: saturation-fadein
+    animation-delay: 5s
+    animation-duration: 10s
+    animation-iteration-count: infinite
+
+@keyframes saturation-fadein
+    0%
+        filter: $bnw-filter
+    50%
+        filter: $color-filter
+    100%
+        filter: $bnw-filter

@@ -1,3 +1,46 @@
+.saturation-fluct {
+  -webkit-filter: saturate(0%) blur(7px);
+          filter: saturate(0%) blur(7px);
+  -webkit-animation-name: saturation-fadein;
+          animation-name: saturation-fadein;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes saturation-fadein {
+  0% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  50% {
+    -webkit-filter: saturate(120%) blur(7px);
+            filter: saturate(120%) blur(7px);
+  }
+  100% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+}
+
+@keyframes saturation-fadein {
+  0% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  50% {
+    -webkit-filter: saturate(120%) blur(7px);
+            filter: saturate(120%) blur(7px);
+  }
+  100% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+}
+
 .fade-in {
   opacity: 0%;
   -webkit-animation: fade-in 7s 2s forwards;
@@ -27,23 +70,12 @@
           filter: saturate(0%) blur(7px);
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes saturation-fadein {
-  0% {
-    -webkit-filter: saturate(0%) blur(7px);
-            filter: saturate(0%) blur(7px);
-  }
-  100% {
-    -webkit-filter: saturate(100%) blur(7px);
-            filter: saturate(100%) blur(7px);
-  }
 }
 
 @keyframes saturation-fadein {
@@ -52,8 +84,116 @@
             filter: saturate(0%) blur(7px);
   }
   100% {
-    -webkit-filter: saturate(100%) blur(7px);
-            filter: saturate(100%) blur(7px);
+    -webkit-filter: saturate(150%) blur(7px);
+            filter: saturate(150%) blur(7px);
+  }
+}
+
+.saturation-fluct {
+  -webkit-filter: saturate(0%) blur(7px);
+          filter: saturate(0%) blur(7px);
+  -webkit-animation-name: saturation-fadein;
+          animation-name: saturation-fadein;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes saturation-fadein {
+  0% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  50% {
+    -webkit-filter: saturate(120%) blur(7px);
+            filter: saturate(120%) blur(7px);
+  }
+  100% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+}
+
+.blinking {
+  -webkit-animation: blinking 2s infinite;
+          animation: blinking 2s infinite;
+}
+
+@-webkit-keyframes blinking {
+  0% {
+    opacity: 50%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 50%;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 50%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 50%;
+  }
+}
+
+.flicker {
+  -webkit-animation: flicker 3s infinite alternate;
+          animation: flicker 3s infinite alternate;
+}
+
+@-webkit-keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 20px #f2a083, 0 0 40px #f2a083, 0 0 45px #f2a083, 0 0 50px #f2a083, 0 0 75px #f2a083;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 20px #f2a083, 0 0 40px #f2a083, 0 0 45px #f2a083, 0 0 50px #f2a083, 0 0 75px #f2a083;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+.saturation-fluct {
+  -webkit-filter: saturate(0%) blur(7px);
+          filter: saturate(0%) blur(7px);
+  -webkit-animation-name: saturation-fadein;
+          animation-name: saturation-fadein;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes saturation-fadein {
+  0% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  50% {
+    -webkit-filter: saturate(120%) blur(7px);
+            filter: saturate(120%) blur(7px);
+  }
+  100% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
   }
 }
 
@@ -105,34 +245,34 @@ body {
 
 .neon-text {
   color: #fff;
-  text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px #f2a083, 0 0 41px #f2a083, 0 0 46px #f2a083, 0 0 21px #f2a083, 0 0 75px #f2a083;
+  text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 21px white, 0 0 41px white, 0 0 46px white, 0 0 21px white, 0 0 75px white;
 }
 
-.neon-text-smaller {
-  color: #fff;
-  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #f2a083, 0 0 20px #f2a083, 0 0 23px #f2a083, 0 0 10px #f2a083, 0 0 38px #f2a083;
+.saturation-fluct {
+  -webkit-filter: saturate(0%) blur(7px);
+          filter: saturate(0%) blur(7px);
+  -webkit-animation-name: saturation-fadein;
+          animation-name: saturation-fadein;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
-.flicker {
-  -webkit-animation: flicker 3s infinite alternate;
-          animation: flicker 3s infinite alternate;
-}
-
-@-webkit-keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 20px #f2a083, 0 0 40px #f2a083, 0 0 45px #f2a083, 0 0 50px #f2a083, 0 0 75px #f2a083;
+@keyframes saturation-fadein {
+  0% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
   }
-  20%, 24%, 55% {
-    text-shadow: none;
+  50% {
+    -webkit-filter: saturate(120%) blur(7px);
+            filter: saturate(120%) blur(7px);
   }
-}
-
-@keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 20px #f2a083, 0 0 40px #f2a083, 0 0 45px #f2a083, 0 0 50px #f2a083, 0 0 75px #f2a083;
-  }
-  20%, 24%, 55% {
-    text-shadow: none;
+  100% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
   }
 }
 
@@ -198,6 +338,34 @@ body {
   }
 }
 
+.saturation-fluct {
+  -webkit-filter: saturate(0%) blur(7px);
+          filter: saturate(0%) blur(7px);
+  -webkit-animation-name: saturation-fadein;
+          animation-name: saturation-fadein;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes saturation-fadein {
+  0% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  50% {
+    -webkit-filter: saturate(120%) blur(7px);
+            filter: saturate(120%) blur(7px);
+  }
+  100% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+}
+
 #img-bgrnd {
   position: absolute;
   z-index: -1;
@@ -207,7 +375,37 @@ body {
   background-size: cover;
 }
 
+.saturation-fluct {
+  -webkit-filter: saturate(0%) blur(7px);
+          filter: saturate(0%) blur(7px);
+  -webkit-animation-name: saturation-fadein;
+          animation-name: saturation-fadein;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes saturation-fadein {
+  0% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  50% {
+    -webkit-filter: saturate(120%) blur(7px);
+            filter: saturate(120%) blur(7px);
+  }
+  100% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+}
+
 .container {
+  color: #5A5A5A;
+  opacity: 30%;
   height: 3em;
   margin: 0;
   left: 0;
@@ -307,15 +505,126 @@ body {
   }
 }
 
+.saturation-fluct {
+  -webkit-filter: saturate(0%) blur(7px);
+          filter: saturate(0%) blur(7px);
+  -webkit-animation-name: saturation-fadein;
+          animation-name: saturation-fadein;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@keyframes saturation-fadein {
+  0% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+  50% {
+    -webkit-filter: saturate(120%) blur(7px);
+            filter: saturate(120%) blur(7px);
+  }
+  100% {
+    -webkit-filter: saturate(0%) blur(7px);
+            filter: saturate(0%) blur(7px);
+  }
+}
+
 #iso-cards {
-  opacity: 60%;
-  -webkit-filter: saturate(0%);
-          filter: saturate(0%);
+  -webkit-filter: blur(10px) saturate(0%);
+          filter: blur(10px) saturate(0%);
+  opacity: 70%;
 }
 
 #iso-cards:hover {
-  -webkit-filter: none;
-          filter: none;
+  opacity: 30%;
+}
+
+.music-bars {
+  position: fixed;
+  bottom: 1.5%;
+  right: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40px;
+  height: 20px;
+}
+
+.music-bars span {
+  width: 10px;
+  height: 100%;
+  background-color: #5ef6ff;
+  border-radius: 3px;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation: bounce 2.2s ease infinite alternate;
+          animation: bounce 2.2s ease infinite alternate;
+  content: '';
+}
+
+.music-bars span:nth-of-type(2) {
+  -webkit-animation-delay: -2.2s;
+          animation-delay: -2.2s;
+  /* Start at the end of animation */
+}
+
+.music-bars span:nth-of-type(3) {
+  -webkit-animation-delay: -3.7s;
+          animation-delay: -3.7s;
+  /* Start mid-way of return of animation */
+}
+
+@-webkit-keyframes bounce {
+  10% {
+    -webkit-transform: scaleY(0.3);
+            transform: scaleY(0.3);
+  }
+  30% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  60% {
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+  }
+  80% {
+    -webkit-transform: scaleY(0.75);
+            transform: scaleY(0.75);
+  }
+  100% {
+    -webkit-transform: scaleY(0.6);
+            transform: scaleY(0.6);
+  }
+}
+
+@keyframes bounce {
+  10% {
+    -webkit-transform: scaleY(0.3);
+            transform: scaleY(0.3);
+  }
+  30% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  60% {
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+  }
+  80% {
+    -webkit-transform: scaleY(0.75);
+            transform: scaleY(0.75);
+  }
+  100% {
+    -webkit-transform: scaleY(0.6);
+            transform: scaleY(0.6);
+  }
 }
 
 body {
