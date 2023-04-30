@@ -627,6 +627,13 @@ body {
   }
 }
 
+#brain-stem {
+  height: 500px;
+  width: 1000px;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: black;
   overflow: hidden;

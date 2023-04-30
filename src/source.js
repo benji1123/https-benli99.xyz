@@ -1,16 +1,17 @@
-const ANIMATED_BACKGROUND = 'https://media.githubusercontent.com/media/benji1123/www.benli99.xyz/master/media/background/cyber/cyber.gif';
+const ANIMATED_BACKGROUND =
+  "https://media.githubusercontent.com/media/benji1123/www.benli99.xyz/master/media/background/cyber/cyber.gif";
 
 /** lazy load background-image */
 const lazyLoadAnimatedBackgroundFile = async () => {
-    const img = await fetch(ANIMATED_BACKGROUND).then(resp => {
-        return resp;
-    })
-    console.log(`fetched image: ${ANIMATED_BACKGROUND}`);
-    const bgrndURL = img.url;
-    const cyber = document.getElementById('img-bgrnd');
-    cyber.style.backgroundImage = `url(${bgrndURL})`;
-    URL.revokeObjectURL(bgrndURL);
-}
+  const img = await fetch(ANIMATED_BACKGROUND).then((resp) => {
+    return resp;
+  });
+  console.log(`fetched image: ${ANIMATED_BACKGROUND}`);
+  const bgrndURL = img.url;
+  const cyber = document.getElementById("img-bgrnd");
+  cyber.style.backgroundImage = `url(${bgrndURL})`;
+  URL.revokeObjectURL(bgrndURL);
+};
 
 let MUSIC_PLAYING = false;
 const NUM_SONGS = 4;
@@ -18,12 +19,12 @@ const NUM_SONGS = 4;
 const MUSIC = new Audio(`media/audio/jeffrey-bezos.mp3`);
 
 function toggleMusic() {
-    if (MUSIC_PLAYING) {
-        MUSIC.pause();
-    } else {
-        MUSIC.play();
-    }
-    MUSIC_PLAYING = !MUSIC_PLAYING;
+  if (MUSIC_PLAYING) {
+    MUSIC.pause();
+  } else {
+    MUSIC.play();
+  }
+  MUSIC_PLAYING = !MUSIC_PLAYING;
 }
 
 // const API_GET_SONG = 'https://pshlsoawx7.execute-api.us-east-1.amazonaws.com/prod'

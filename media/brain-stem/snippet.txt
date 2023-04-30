@@ -1,0 +1,1 @@
+<model-viewer src="BrainStem.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" auto-rotate environment-image="aircraft_workshop_01_1k.hdr" exposure="1.36" autoplay> </model-viewer>
